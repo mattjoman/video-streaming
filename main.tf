@@ -36,12 +36,23 @@ resource "aws_s3_bucket_public_access_block" "public_access" {
 # DynamoDB Table
 resource "aws_dynamodb_table" "users" {
   name           = "users"
-  billing_mode   = "PAY_PER_REQUEST"  # On-demand pricing
+  billing_mode   = "PAY_PER_REQUEST"
   hash_key       = "user_id"
   
   attribute {
     name = "user_id"
-    type = "S"  # String type
+    type = "S"
+  }
+
+  attribute {
+    name = "team"
+    type = "S"
+  }
+
+  global_secondary_index {
+    name               = "TeamIndex"
+    hash_key          = "team"
+    projection_type    = "ALL"
   }
 
   tags = {
