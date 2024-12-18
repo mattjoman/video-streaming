@@ -10,22 +10,9 @@ variable "aws_region" {
   default     = "us-west-2"
 }
 
-variable "bucket_name" {
-  description = "Name of the S3 bucket"
-  type        = string
-  default     = "playerappassessment"
-}
-
 # S3 Bucket
 resource "aws_s3_bucket" "main" {
-  #bucket = "${var.bucket_name}-${random_string.suffix.result}"
   bucket = "playerappassessment"
-}
-
-resource "random_string" "suffix" {
-  length  = 8
-  special = false
-  upper   = false
 }
 
 # Enable versioning
