@@ -34,8 +34,8 @@ resource "aws_s3_bucket_public_access_block" "public_access" {
 }
 
 # DynamoDB Table
-resource "aws_dynamodb_table" "users" {
-  name           = "users"
+resource "aws_dynamodb_table" "dev_users" {
+  name           = "dev_users"
   billing_mode   = "PAY_PER_REQUEST"
   hash_key       = "user_id"
   
@@ -56,9 +56,43 @@ resource "aws_dynamodb_table" "users" {
   }
 
   tags = {
-    Environment = "production"
+    Environment = "dev"
     Project     = "video-streaming-app"
   }
+}
+
+# Initial Users
+resource "aws_dynamodb_table_item" "user_1" {
+  table_name = aws_dynamodb_table.dev_users.name
+  hash_key   = "user_id"
+
+  item = jsonencode({
+    user_id = { S = "001" }
+    name    = { S = "Alice Smith" }
+    team    = { S = "Reds" }
+  })
+}
+
+resource "aws_dynamodb_table_item" "user_2" {
+  table_name = aws_dynamodb_table.dev_users.name
+  hash_key   = "user_id"
+
+  item = jsonencode({
+    user_id = { S = "002" }
+    name    = { S = "Bob Johnson" }
+    team    = { S = "Reds" }
+  })
+}
+
+resource "aws_dynamodb_table_item" "user_3" {
+  table_name = aws_dynamodb_table.dev_users.name
+  hash_key   = "user_id"
+
+  item = jsonencode({
+    user_id = { S = "003" }
+    name    = { S = "Carol Williams" }
+    team    = { S = "blues" }
+  })
 }
 
 # Output
@@ -70,5 +104,5 @@ output "bucket_name" {
 # Additional output for DynamoDB
 output "dynamodb_table_name" {
   description = "Name of the created DynamoDB table"
-  value       = aws_dynamodb_table.users.name
+  value       = aws_dynamodb_table.dev_users.name
 }
