@@ -18,8 +18,8 @@ variable "bucket_name" {
 
 # S3 Bucket
 resource "aws_s3_bucket" "main" {
-  bucket = "${var.bucket_name}-${random_string.suffix.result}"
-  #bucket = "${var.bucket_name}"
+  #bucket = "${var.bucket_name}-${random_string.suffix.result}"
+  bucket = "playerappassessment"
 }
 
 resource "random_string" "suffix" {
