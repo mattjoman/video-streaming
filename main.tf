@@ -12,7 +12,7 @@ variable "aws_region" {
 
 # S3 Bucket
 resource "aws_s3_bucket" "main" {
-  bucket = "playerappassessment"
+  bucket = "video-streaming-app-bucket"
 }
 
 # Enable versioning
@@ -46,7 +46,7 @@ resource "aws_dynamodb_table" "users" {
 
   tags = {
     Environment = "production"
-    Project     = "PlayerAppAssessment"
+    Project     = "video-streaming-app"
   }
 }
 
