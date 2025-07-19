@@ -23,17 +23,7 @@ provider:
             - dynamodb:Scan
           Resource: 
             - "arn:aws:dynamodb:${self:provider.region}:*:table/*"
-        - Effect: Allow
-          Action:
-            - s3:PutBucketTagging
-            - s3:GetBucketTagging
-            - s3:PutBucketVersioning
-            - s3:GetBucketVersioning
-            - s3:PutBucketPublicAccessBlock
-            - s3:GetBucketPublicAccessBlock
-          Resource: 
-            - "arn:aws:s3:::video-streaming-backend-*"
-            - "arn:aws:s3:::video-streaming-backend-*/*"
+
 
 
 functions:
