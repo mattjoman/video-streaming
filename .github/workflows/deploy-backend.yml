@@ -43,9 +43,18 @@ jobs:
       working-directory: ./backend
       run: npm run build
       
-    - name: Deploy to AWS Lambda
+    - name: Deploy to Development
+      if: github.ref == 'refs/heads/develop'
       working-directory: ./backend
       run: |
-        serverless deploy --verbose
+        serverless deploy --stage dev --verbose
+      env:
+        NODE_ENV: development
+        
+    - name: Deploy to Production
+      if: github.ref == 'refs/heads/main'
+      working-directory: ./backend
+      run: |
+        serverless deploy --stage prod --verbose
       env:
         NODE_ENV: production 
