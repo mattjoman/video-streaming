@@ -10,7 +10,21 @@ provider:
   environment:
     NODE_ENV: production
     FRONTEND_URL: ${env:FRONTEND_URL, 'https://your-frontend-domain.com'}
-
+  iam:
+    role:
+      statements:
+        - Effect: Allow
+          Action:
+            - s3:CreateBucket
+            - s3:PutObject
+            - s3:GetObject
+            - s3:DeleteObject
+            - s3:ListBucket
+            - s3:PutBucketTagging
+            - s3:GetBucketTagging
+          Resource: 
+            - "arn:aws:s3:::video-streaming-backend-*"
+            - "arn:aws:s3:::video-streaming-backend-*/*"
 
 
 
