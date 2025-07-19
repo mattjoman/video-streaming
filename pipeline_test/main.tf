@@ -143,6 +143,25 @@ resource "aws_codepipeline" "app_pipeline" {
       }
     }
   }
+
+  stage {
+    name = "Deploy"
+
+    action {
+      name            = "Deploy"
+      category        = "Deploy"
+      owner           = "AWS"
+      provider        = "ECS"
+      input_artifacts = ["source_output"]
+      version         = "1"
+
+      configuration = {
+        ClusterName = var.ecs_cluster_name
+        ServiceName = var.ecs_service_name
+        FileName    = "imageDefinitions.json"
+      }
+    }
+  }
 }
 
 # Basic IAM policies

@@ -26,4 +26,24 @@ variable "github_branch" {
   description = "GitHub branch name"
   type        = string
   default     = "main"
+}
+
+variable "ecs_cluster_name" {
+  description = "Name of the ECS cluster"
+  type        = string
+}
+
+variable "ecs_service_name" {
+  description = "Name of the ECS service"
+  type        = string
+}
+
+variable "project_name" {
+  description = "Name of the project"
+  type        = string
+  default     = "video-streaming"
+}
+
+data "aws_availability_zones" "available" {
+  state = "available"
 } 
