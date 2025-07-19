@@ -10,19 +10,7 @@ provider:
   environment:
     NODE_ENV: production
     FRONTEND_URL: ${env:FRONTEND_URL, 'https://your-frontend-domain.com'}
-  iam:
-    role:
-      statements:
-        - Effect: Allow
-          Action:
-            - dynamodb:GetItem
-            - dynamodb:PutItem
-            - dynamodb:UpdateItem
-            - dynamodb:DeleteItem
-            - dynamodb:Query
-            - dynamodb:Scan
-          Resource: 
-            - "arn:aws:dynamodb:${self:provider.region}:*:table/*"
+
 
 
 

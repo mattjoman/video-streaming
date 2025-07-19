@@ -1,6 +1,5 @@
 import { Module, NestModule, MiddlewareConsumer } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
-import { DynamoDBService } from './services/dynamodb.service';
 import { AppController } from './app.controller';
 import { LoggerMiddleware } from './middleware/logger.middleware';
 
@@ -9,8 +8,7 @@ import { LoggerMiddleware } from './middleware/logger.middleware';
     ConfigModule.forRoot(),
   ],
   controllers: [AppController],
-  providers: [DynamoDBService],
-  exports: [DynamoDBService],
+  providers: [],
 })
 export class AppModule implements NestModule {
   configure(consumer: MiddlewareConsumer) {
