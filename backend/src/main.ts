@@ -37,7 +37,7 @@ export const handler = async (event: any, context: any) => {
   }
 };
 
-// Local development only
+// Local development (only run in local development environment)
 if (process.env.NODE_ENV !== 'production') {
   bootstrap().then(async (app) => {
     await app.listen(3000);
