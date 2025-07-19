@@ -1,8 +1,6 @@
 import { NestFactory } from '@nestjs/core';
 import { AppModule } from './app.module';
 
-// Only import serverless dependencies in production
-let serverlessExpress: any;
 let server: any;
 
 async function bootstrap() {
@@ -22,17 +20,21 @@ async function bootstrap() {
 
 // Lambda handler (only used in production)
 export const handler = async (event: any, context: any) => {
-  if (!serverlessExpress) {
-    serverlessExpress = require('@vendia/serverless-express').default;
+  try {
+    // Import the configure function from serverless-express
+    const { configure } = require('@vendia/serverless-express');
+    
+    const app = await bootstrap();
+    await app.init();
+    
+    const expressApp = app.getHttpAdapter().getInstance();
+    server = server ?? configure({ app: expressApp });
+    
+    return server(event, context);
+  } catch (error) {
+    console.error('Lambda handler error:', error);
+    throw error;
   }
-  
-  const app = await bootstrap();
-  await app.init();
-  
-  const expressApp = app.getHttpAdapter().getInstance();
-  server = server ?? serverlessExpress({ app: expressApp });
-  
-  return server(event, context);
 };
 
 // Local development

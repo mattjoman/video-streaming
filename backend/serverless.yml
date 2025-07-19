@@ -1,0 +1,45 @@
+service: video-streaming-backend
+
+frameworkVersion: '3'
+
+provider:
+  name: aws
+  runtime: nodejs18.x
+  region: us-east-1
+  stage: ${opt:stage, 'dev'}
+  environment:
+    NODE_ENV: production
+    FRONTEND_URL: ${env:FRONTEND_URL, 'https://your-frontend-domain.com'}
+  iam:
+    role:
+      statements:
+        - Effect: Allow
+          Action:
+            - dynamodb:GetItem
+            - dynamodb:PutItem
+            - dynamodb:UpdateItem
+            - dynamodb:DeleteItem
+            - dynamodb:Query
+            - dynamodb:Scan
+          Resource: 
+            - "arn:aws:dynamodb:${self:provider.region}:*:table/*"
+
+functions:
+  api:
+    handler: dist/main.handler
+    events:
+      - httpApi:
+          path: /{proxy+}
+          method: ANY
+    timeout: 30
+    memorySize: 512
+    environment:
+      NODE_ENV: production
+
+plugins:
+  - serverless-offline
+
+custom:
+  serverless-offline:
+    httpPort: 3000
+    noPrependStageInUrl: true 
