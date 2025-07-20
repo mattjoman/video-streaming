@@ -8,7 +8,7 @@ import { LoggerMiddleware } from './middleware/logger.middleware';
     ConfigModule.forRoot(),
   ],
   controllers: [AppController],
-  providers: [],
+  providers: [], // Add any providers here
 })
 export class AppModule implements NestModule {
   configure(consumer: MiddlewareConsumer) {
