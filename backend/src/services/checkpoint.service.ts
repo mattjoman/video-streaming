@@ -16,10 +16,15 @@ export class CheckpointService {
   }
 
   async generateMission(config: MissionConfigDto): Promise<MissionDto> {
-    // Find checkpoints that have at least one matching tag
-    const checkpoints = await this.checkpointModel.find({
-      tags: { $in: config.tags }
-    }).limit(config.n).exec();
+    let query = {};
+    
+    // Only filter by tags if tags array is not empty
+    if (config.tags && config.tags.length > 0) {
+      query = { tags: { $in: config.tags } };
+    }
+    
+    // Find checkpoints based on query and limit
+    const checkpoints = await this.checkpointModel.find(query).limit(config.n).exec();
 
     return {
       config,

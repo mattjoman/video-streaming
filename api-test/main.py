@@ -7,10 +7,11 @@ def generate_mission(n: int, tags: list[str]):
         "n": n,
         "r": 5,
         "location": [-0.086, 51.518],
-        "tags": tags
+        "tags": tags,
+        "cptSource": "database"
     }
     response = r.post(url, json=body)
     return response.json()
 
 if __name__ == "__main__":
-    print(generate_mission(2, ["nature"]))
+    print(generate_mission(2, []))
