@@ -11,6 +11,10 @@ class GeoJsonPointDto {
 }
 
 export class MissionConfigDto {
+  @IsString()
+  @IsOptional()
+  name?: string;
+
   @IsNumber()
   @Min(1)
   @Max(50)
