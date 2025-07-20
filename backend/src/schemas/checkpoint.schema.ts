@@ -28,4 +28,12 @@ export class Checkpoint {
   tags: string[];
 }
 
-export const CheckpointSchema = SchemaFactory.createForClass(Checkpoint); 
+export const CheckpointSchema = SchemaFactory.createForClass(Checkpoint);
+
+// Remove _id from all outputs
+CheckpointSchema.set('toJSON', {
+  transform: (doc, ret) => {
+    delete ret._id;
+    return ret;
+  }
+}); 
