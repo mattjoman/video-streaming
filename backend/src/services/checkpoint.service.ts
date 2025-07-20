@@ -16,11 +16,21 @@ export class CheckpointService {
   }
 
   async generateMission(config: MissionConfigDto): Promise<MissionDto> {
-    let query = {};
+    let query: any = {};
     
-    // Only filter by tags if tags array is not empty
+    // Filter by tags if tags array is not empty
     if (config.tags && config.tags.length > 0) {
-      query = { tags: { $in: config.tags } };
+      query.tags = { $in: config.tags };
+    }
+    
+    // Add geospatial filter if location and radius are provided
+    if (config.location && config.r) {
+      const radiusInRadians = config.r / 6371; // Convert km to radians (Earth radius = 6371 km)
+      query.location = {
+        $geoWithin: {
+          $centerSphere: [config.location.coordinates, radiusInRadians]
+        }
+      };
     }
     
     // Find checkpoints based on query and limit

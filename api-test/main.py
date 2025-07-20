@@ -5,7 +5,7 @@ def generate_mission(n: int, tags: list[str]):
     url = "http://localhost:3000/checkpoints/generate-mission"
     body = {
         "n": n,
-        "r": 5,
+        "r": 1,
         "location": {
             "type": "Point",
             "coordinates": [-0.086, 51.518]
