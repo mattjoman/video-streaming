@@ -20,7 +20,7 @@ def generate_mission(n: int, r: int, location: list[float], tags: list[str], cpt
 
 def generate_and_save_mission():
     mission = generate_mission(n=2, r=1, location=[-0.086, 51.518], tags=[])
-    mission["config"]["name"] = 'testName'
+    #mission["config"]["name"] = 'testName'
 
     url = "http://localhost:3000/missions"
     response = requests.post(url, json=mission)
@@ -28,4 +28,5 @@ def generate_and_save_mission():
 
 
 if __name__ == "__main__":
+    print(generate_mission(n=2, r=1, location=[-0.086, 51.518], tags=[]))
     generate_and_save_mission()

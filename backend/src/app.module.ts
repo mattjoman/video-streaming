@@ -5,6 +5,9 @@ import { AppController } from './app.controller';
 import { CheckpointController } from './controllers/checkpoint.controller';
 import { CheckpointService } from './services/checkpoint.service';
 import { Checkpoint, CheckpointSchema } from './schemas/checkpoint.schema';
+import { MissionController } from './controllers/mission.controller';
+import { MissionService } from './services/mission.service';
+import { Mission, MissionSchema } from './schemas/mission.schema';
 import { LoggerMiddleware } from './middleware/logger.middleware';
 
 @Module({
@@ -17,10 +20,13 @@ import { LoggerMiddleware } from './middleware/logger.middleware';
       }),
       inject: [ConfigService],
     }),
-    MongooseModule.forFeature([{ name: Checkpoint.name, schema: CheckpointSchema }]),
+    MongooseModule.forFeature([
+      { name: Checkpoint.name, schema: CheckpointSchema },
+      { name: Mission.name, schema: MissionSchema }
+    ]),
   ],
-  controllers: [AppController, CheckpointController],
-  providers: [CheckpointService],
+  controllers: [AppController, CheckpointController, MissionController],
+  providers: [CheckpointService, MissionService],
 })
 export class AppModule implements NestModule {
   configure(consumer: MiddlewareConsumer) {
