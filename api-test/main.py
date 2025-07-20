@@ -6,7 +6,10 @@ def generate_mission(n: int, tags: list[str]):
     body = {
         "n": n,
         "r": 5,
-        "location": [-0.086, 51.518],
+        "location": {
+            "type": "Point",
+            "coordinates": [-0.086, 51.518]
+        },
         "tags": tags,
         "cptSource": "database"
     }
