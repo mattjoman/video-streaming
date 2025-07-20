@@ -1,0 +1,3641 @@
+[
+    {
+        "_id": {
+            "$oid": "64a321bcd64107cfb11b9e7f"
+        },
+        "name": "Kyoto Garden",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -0.20465348384180265,
+                51.50280153722991
+            ]
+        },
+        "tags": [
+            "nature"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "64a5c203c015deb2cfadcb4c"
+        },
+        "name": "Battersea Power Station",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -0.14509647178955926,
+                51.48278188042227
+            ]
+        },
+        "tags": [
+            "landmark"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "64a5c257c015deb2cfadcb4e"
+        },
+        "name": "Linford Christie Stadium",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -0.2358266246710218,
+                51.51922130484066
+            ]
+        },
+        "tags": [
+            "misc"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "64a5c2d4c015deb2cfadcb50"
+        },
+        "name": "Finsbury Circus Gardens",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -0.08645573800534086,
+                51.51786407887163
+            ]
+        },
+        "tags": [
+            "nature"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "64a5c345c015deb2cfadcb52"
+        },
+        "name": "Neasden Temple",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -0.2606955680723305,
+                51.54826468120164
+            ]
+        },
+        "tags": [
+            "landmark"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "64a5c417c015deb2cfadcb54"
+        },
+        "name": "Hampstead Heath Tumulus",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -0.16371983860272588,
+                51.56297130067055
+            ]
+        },
+        "tags": [
+            "nature"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "64a5c44bc015deb2cfadcb56"
+        },
+        "name": "Parliament Hill Athletics Track",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -0.1553116697688209,
+                51.557214139160344
+            ]
+        },
+        "tags": [
+            "misc"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "64a5c667c015deb2cfadcb58"
+        },
+        "name": "St Dunstan Church Garden",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -0.08245800110503199,
+                51.5096657251106
+            ]
+        },
+        "tags": [
+            "nature"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "64a5cb12c015deb2cfadcb5a"
+        },
+        "name": "MI6",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -0.12360396911140721,
+                51.48703369659411
+            ]
+        },
+        "tags": [
+            "landmark"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "64a5cb9fc015deb2cfadcb5c"
+        },
+        "name": "St James's Square",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -0.1353220999383798,
+                51.50724770020958
+            ]
+        },
+        "tags": [
+            "nature"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "64a5ce79c015deb2cfadcb61"
+        },
+        "name": "Nelson's Column",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -0.1279639830299422,
+                51.507858682750545
+            ]
+        },
+        "tags": [
+            "misc"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "64a5ced2c015deb2cfadcb63"
+        },
+        "name": "Golden Divers",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -0.1334069430166736,
+                51.51001438234023
+            ]
+        },
+        "tags": [
+            "misc"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "64a5cfe4c015deb2cfadcb65"
+        },
+        "name": "Smallest Police Station",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -0.12726014551117465,
+                51.50803373837301
+            ]
+        },
+        "tags": [
+            "landmark",
+            "misc"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "64a5d9a4c015deb2cfadcb67"
+        },
+        "name": "The Gherkin",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -0.08031806801832297,
+                51.51444593559832
+            ]
+        },
+        "tags": [
+            "landmark"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "64a5da5ac015deb2cfadcb69"
+        },
+        "name": "St Helen's Church",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -0.08169980304972345,
+                51.51480667102619
+            ]
+        },
+        "tags": [
+            "landmark"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "64a5da99c015deb2cfadcb6b"
+        },
+        "name": "St Paul's Cathedral",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -0.09829938812762183,
+                51.513717068108384
+            ]
+        },
+        "tags": [
+            "landmark"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "64a5dad1c015deb2cfadcb6d"
+        },
+        "name": "Soho Square Gardens",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -0.13221600173048578,
+                51.515292675051725
+            ]
+        },
+        "tags": [
+            "nature"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "64a5db60c015deb2cfadcb6f"
+        },
+        "name": "St Matthew's Garden",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -0.1159320757731869,
+                51.460005247194324
+            ]
+        },
+        "tags": [
+            "nature"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "64a5dc33c015deb2cfadcb71"
+        },
+        "name": "Brixton Market",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -0.11407009817322644,
+                51.4618439920399
+            ]
+        },
+        "tags": [
+            "misc",
+            "tourist"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "64a5dc93c015deb2cfadcb73"
+        },
+        "name": "Long Pond",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -0.14283551140706055,
+                51.45946308960699
+            ]
+        },
+        "tags": [
+            "nature",
+            "misc"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "64a5dd50c015deb2cfadcb75"
+        },
+        "name": "Canal Bridge",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -0.18382758392676823,
+                51.52125021445869
+            ]
+        },
+        "tags": [
+            "misc"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "64a5ddb9c015deb2cfadcb77"
+        },
+        "name": "Smithfield Market",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -0.1013259748116649,
+                51.51933803914717
+            ]
+        },
+        "tags": [
+            "landmark",
+            "misc",
+            "tourist"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "64a5de49c015deb2cfadcb79"
+        },
+        "name": "Dutch Church",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -0.08578897928840477,
+                51.51552490459969
+            ]
+        },
+        "tags": [
+            "landmark"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "64a5dea8c015deb2cfadcb7b"
+        },
+        "name": "Speaker's Corner",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -0.15874184145082804,
+                51.510996653688714
+            ]
+        },
+        "tags": [
+            "misc"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "64a5df44c015deb2cfadcb7d"
+        },
+        "name": "Gandalf Corner",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -0.14572259923015407,
+                51.5253715884157
+            ]
+        },
+        "tags": [
+            "misc"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "64a5e019c015deb2cfadcb7f"
+        },
+        "name": "Savile Row",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -0.14043907401475017,
+                51.51095701439725
+            ]
+        },
+        "tags": [
+            "misc"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "64a5e0e7c015deb2cfadcb81"
+        },
+        "name": "Triangle",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -0.22457315624468022,
+                51.52026418972646
+            ]
+        },
+        "tags": [
+            "misc"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "64a65a57c015deb2cfadcb86"
+        },
+        "name": "Shepherd's Bush Green",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -0.22224495957613888,
+                51.504192606715954
+            ]
+        },
+        "tags": [
+            "nature"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "64a7b71cc015deb2cfadcb8b"
+        },
+        "name": "The Shard",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -0.086608,
+                51.50413
+            ]
+        },
+        "tags": [
+            "landmark"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "64a7b789c015deb2cfadcb8d"
+        },
+        "name": "Tower Bridge",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -0.075472,
+                51.505608
+            ]
+        },
+        "tags": [
+            "landmark"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "64a7b878c015deb2cfadcb8f"
+        },
+        "name": "Big Ben",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -0.124738,
+                51.500869
+            ]
+        },
+        "tags": [
+            "landmark"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "64ac6878c015deb2cfadcb96"
+        },
+        "name": "Beatles Crossing",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -0.17731574995984545,
+                51.53203798382713
+            ]
+        },
+        "tags": [
+            "misc"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "64ac6922c015deb2cfadcb98"
+        },
+        "name": "Wembley Stadium",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -0.2770905939775082,
+                51.55589422232935
+            ]
+        },
+        "tags": [
+            "landmark"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "64ac6963c015deb2cfadcb9a"
+        },
+        "name": "London Peace Pagoda",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -0.15902806736562058,
+                51.48203132944024
+            ]
+        },
+        "tags": [
+            "landmark",
+            "misc",
+            "nature"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "64ac69f9c015deb2cfadcb9c"
+        },
+        "name": "Max Roach Park",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -0.1118264029412557,
+                51.4668840483598
+            ]
+        },
+        "tags": [
+            "nature"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "64ac6a6ac015deb2cfadcb9e"
+        },
+        "name": "Nine Elms Market",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -0.13436500523945705,
+                51.47828169088001
+            ]
+        },
+        "tags": [
+            "misc",
+            "tourist"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "64ac6c1ac015deb2cfadcba3"
+        },
+        "name": "Borough Market",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -0.0904792654900553,
+                51.50558865771831
+            ]
+        },
+        "tags": [
+            "tourist",
+            "misc",
+            "landmark"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "64ac6ccac015deb2cfadcba5"
+        },
+        "name": "Camden Market",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -0.14651012668258137,
+                51.5413924062548
+            ]
+        },
+        "tags": [
+            "misc",
+            "tourist"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "64ac6d53c015deb2cfadcba7"
+        },
+        "name": "Columbia Road Flower Market",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -0.07014495374801563,
+                51.5288792054262
+            ]
+        },
+        "tags": [
+            "misc",
+            "tourist"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "64ac6dbac015deb2cfadcba9"
+        },
+        "name": "Spitalfields Market",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -0.07606727099393362,
+                51.519754079362954
+            ]
+        },
+        "tags": [
+            "misc",
+            "tourist"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "6519bae7ba20f6aa7f3b0e15"
+        },
+        "name": "Transmitting Station",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -0.075265389027106,
+                51.42434996890914
+            ]
+        },
+        "tags": [
+            "landmark",
+            "misc"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "6519ca98e20ab2a6a79eec8e"
+        },
+        "name": "Girdlers Hall",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -0.09041575073854613,
+                51.51699341954113
+            ]
+        },
+        "tags": [
+            "landmark"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "6519cc24e20ab2a6a79eec90"
+        },
+        "name": "Holborn Viaduct",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -0.10503448129169035,
+                51.51721364626164
+            ]
+        },
+        "tags": [
+            "misc",
+            "landmark"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "6519ccafe20ab2a6a79eec92"
+        },
+        "name": "Red Lion Square",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -0.11856015679342358,
+                51.51925371410061
+            ]
+        },
+        "tags": [
+            "nature"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "6519cdb9e20ab2a6a79eec94"
+        },
+        "name": "Dalston Kingsland",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -0.0754342082347792,
+                51.54817818413439
+            ]
+        },
+        "tags": [
+            "misc"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "6519d0b9e20ab2a6a79eec98"
+        },
+        "name": "Barnes Common",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -0.23523233085941175,
+                51.46985271235591
+            ]
+        },
+        "tags": [
+            "nature"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "6519d11ce20ab2a6a79eec9a"
+        },
+        "name": "Camberwell Green",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -0.09285449503713128,
+                51.47526358321462
+            ]
+        },
+        "tags": [
+            "nature"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "6519d3a7e20ab2a6a79eec9c"
+        },
+        "name": "Karl Marx's Tomb",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -0.14374051549717937,
+                51.56626650036068
+            ]
+        },
+        "tags": [
+            "misc"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "6519d3d3e20ab2a6a79eec9e"
+        },
+        "name": "Highgate Cemetry",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -0.14664288139571546,
+                51.56691777183892
+            ]
+        },
+        "tags": [
+            "misc"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "6519d632e20ab2a6a79eeca0"
+        },
+        "name": "York Watergate",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -0.12291212855950251,
+                51.50813578991292
+            ]
+        },
+        "tags": [
+            "landmark"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "6519d71de20ab2a6a79eeca2"
+        },
+        "name": "Narrow Street",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -0.03608435852999747,
+                51.50950641656217
+            ]
+        },
+        "tags": [
+            "misc"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "6519d8cde20ab2a6a79eeca6"
+        },
+        "name": "Mendelssohn Tree",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -0.09692411934737466,
+                51.520303356424
+            ]
+        },
+        "tags": [
+            "misc"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "651dc1d6e20ab2a6a79eecab"
+        },
+        "name": "Portman Square",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -0.15562924810058165,
+                51.515324590229945
+            ]
+        },
+        "tags": [
+            "misc"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "651dc1f0e20ab2a6a79eecad"
+        },
+        "name": "Manchester Square",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -0.15320453115111876,
+                51.51680677386363
+            ]
+        },
+        "tags": [
+            "misc"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "651dc24ee20ab2a6a79eecaf"
+        },
+        "name": "Paddington Street Gardens",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -0.15391870779953853,
+                51.52009535549688
+            ]
+        },
+        "tags": [
+            "nature"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "651dc265e20ab2a6a79eecb1"
+        },
+        "name": "Armillary Sphere",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -0.15410378022156612,
+                51.520230542517744
+            ]
+        },
+        "tags": [
+            "misc"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "651dc2c4e20ab2a6a79eecb3"
+        },
+        "name": "Marylebone Gardens",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -0.15166565222702877,
+                51.52244354706417
+            ]
+        },
+        "tags": [
+            "nature"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "651dc35ae20ab2a6a79eecb5"
+        },
+        "name": "Wladyslaw Sikorski Statue",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -0.14537971983042963,
+                51.521090720888154
+            ]
+        },
+        "tags": [
+            "misc"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "651dc430e20ab2a6a79eecb9"
+        },
+        "name": "Golden Square",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -0.1371861924309914,
+                51.511678995111204
+            ]
+        },
+        "tags": [
+            "nature"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "651dc6b7e20ab2a6a79eecbc"
+        },
+        "name": "King Henry's Mound",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -0.29468985390808555,
+                51.44487376066577
+            ]
+        },
+        "tags": [
+            "misc",
+            "nature"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "651dc7e3e20ab2a6a79eecc1"
+        },
+        "name": "Pembroke Lodge",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -0.29432641085601174,
+                51.44252042127668
+            ]
+        },
+        "tags": [
+            "landmark"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "651dc84ae20ab2a6a79eecc3"
+        },
+        "name": "White Lodge",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -0.2660777209626297,
+                51.44542842588741
+            ]
+        },
+        "tags": [
+            "landmark"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "651dc8d1e20ab2a6a79eecc5"
+        },
+        "name": "Beverley Brook Bridge",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -0.2553387434310972,
+                51.44933678590984
+            ]
+        },
+        "tags": [
+            "misc"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "651dc95de20ab2a6a79eecc7"
+        },
+        "name": "Woods",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -0.2878682710110114,
+                51.445630256430086
+            ]
+        },
+        "tags": [
+            "nature"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "651dc9d6e20ab2a6a79eecca"
+        },
+        "name": "Sheen Common",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -0.2753884243971294,
+                51.45805998559862
+            ]
+        },
+        "tags": [
+            "nature"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "651dcac8e20ab2a6a79eeccc"
+        },
+        "name": "Slipway",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -0.30798280746610285,
+                51.45887262192945
+            ]
+        },
+        "tags": [
+            "misc"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "651dcb4ae20ab2a6a79eecce"
+        },
+        "name": "Richmond Lock",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -0.31714243676540077,
+                51.462251492357474
+            ]
+        },
+        "tags": [
+            "misc"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "651dcbeee20ab2a6a79eecd0"
+        },
+        "name": "Passage",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -0.2420200109312587,
+                51.515163850238224
+            ]
+        },
+        "tags": [
+            "misc"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "651dccb0e20ab2a6a79eecd3"
+        },
+        "name": "St. Mary The Boltons",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -0.18420280377466014,
+                51.489108359013564
+            ]
+        },
+        "tags": [
+            "landmark"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "651dcd2ae20ab2a6a79eecd5"
+        },
+        "name": "Crazy roundabout",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -0.15212747087491207,
+                51.50240664598546
+            ]
+        },
+        "tags": [
+            "misc"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "651dcd4de20ab2a6a79eecd7"
+        },
+        "name": "Hyde Park Corner",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -0.15272292127621823,
+                51.503103479991125
+            ]
+        },
+        "tags": [
+            "misc"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "651dcdaae20ab2a6a79eecd9"
+        },
+        "name": "Strutton Ground Market",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -0.13380805351009606,
+                51.49715263932715
+            ]
+        },
+        "tags": [
+            "tourist"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "651dcdd1e20ab2a6a79eecdb"
+        },
+        "name": "westminster Cathedral",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -0.1393054702633556,
+                51.495812488424
+            ]
+        },
+        "tags": [
+            "landmark"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "651dcf97e20ab2a6a79eece0"
+        },
+        "name": "Viewpoint",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -0.4275221610709412,
+                51.464100783136715
+            ]
+        },
+        "tags": [
+            "nature"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "651dcff2e20ab2a6a79eece2"
+        },
+        "name": "Canal Junction",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -0.4066024960964354,
+                51.49989605375417
+            ]
+        },
+        "tags": [
+            "misc"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "651dd0d7e20ab2a6a79eece4"
+        },
+        "name": "Aqueduct",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -0.28174284317637355,
+                51.53819357007896
+            ]
+        },
+        "tags": [
+            "misc"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "651dd262e20ab2a6a79eece6"
+        },
+        "name": "Wiggly path",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -0.2185773912658484,
+                51.509314687734985
+            ]
+        },
+        "tags": [
+            "misc"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "651dd2a1e20ab2a6a79eece8"
+        },
+        "name": "The Beeb",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -0.22473511630483722,
+                51.51118134069429
+            ]
+        },
+        "tags": [
+            "landmark"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "651dd38de20ab2a6a79eecea"
+        },
+        "name": "Brutalist",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -0.2056089800569061,
+                51.52411936491003
+            ]
+        },
+        "tags": [
+            "landmark"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "6599e97329fecf6e381737da"
+        },
+        "name": "BT Tower",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -0.13861854158231823,
+                51.521506312114475
+            ]
+        },
+        "tags": [
+            "landmark"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "6599eae129fecf6e381737db"
+        },
+        "name": "Blackfriars",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -0.10404293775677198,
+                51.511656846080584
+            ]
+        },
+        "tags": [
+            "misc"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "6599eb1429fecf6e381737dc"
+        },
+        "name": "Leicester Square",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -0.13016747106001203,
+                51.5103719933789
+            ]
+        },
+        "tags": [
+            "nature"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "6599eb4129fecf6e381737dd"
+        },
+        "name": "Piccadilly Circus",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -0.13424431648638047,
+                51.51014017163968
+            ]
+        },
+        "tags": [
+            "misc"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "6599ebb129fecf6e381737de"
+        },
+        "name": "Chinatown",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -0.13105222840501973,
+                51.511779541080685
+            ]
+        },
+        "tags": [
+            "misc",
+            "tourist"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "6599ebf829fecf6e381737df"
+        },
+        "name": "Hippodrome",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -0.12916717994229554,
+                51.51174429847366
+            ]
+        },
+        "tags": [
+            "landmark",
+            "business"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "6599ec1429fecf6e381737e0"
+        },
+        "name": "New Bond St",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -0.14415662542387464,
+                51.51199292938392
+            ]
+        },
+        "tags": [
+            "misc"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "6599ec3229fecf6e381737e1"
+        },
+        "name": "Grosvenor Square",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -0.15158307654853376,
+                51.512090950251846
+            ]
+        },
+        "tags": [
+            "nature"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "6599ec5629fecf6e381737e2"
+        },
+        "name": "S Molton St",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -0.14792757164371784,
+                51.51373206021289
+            ]
+        },
+        "tags": [
+            "misc"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "6599ec7a29fecf6e381737e3"
+        },
+        "name": "Hanover Square",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -0.14362553863718652,
+                51.51358542334008
+            ]
+        },
+        "tags": [
+            "nature"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "6599ece429fecf6e381737e4"
+        },
+        "name": "Hanover Sq Cabby's Shelter",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -0.1435827483519514,
+                51.514201229273056
+            ]
+        },
+        "tags": [
+            "landmark",
+            "misc"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "6599ed0329fecf6e381737e5"
+        },
+        "name": "Cavendish Square",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -0.14419594055596452,
+                51.516535382775245
+            ]
+        },
+        "tags": [
+            "nature"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "6599ed6929fecf6e381737e6"
+        },
+        "name": "St James' Church",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -0.10516689044171468,
+                51.52395857122381
+            ]
+        },
+        "tags": [
+            "landmark",
+            "nature"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "6599ed9929fecf6e381737e7"
+        },
+        "name": "Nothampton Square",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -0.1028354226396555,
+                51.52722214463209
+            ]
+        },
+        "tags": [
+            "nature"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "6599edcf29fecf6e381737e8"
+        },
+        "name": "Stepney Green Park",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -0.04661847194232127,
+                51.518181272891596
+            ]
+        },
+        "tags": [
+            "nature"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "6599ee3e29fecf6e381737e9"
+        },
+        "name": "Aldgate Square",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -0.07681658306166739,
+                51.513968140229785
+            ]
+        },
+        "tags": [
+            "nature"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "6599ee9429fecf6e381737ea"
+        },
+        "name": "Leadenhall Market",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -0.08348054686394546,
+                51.512792335920416
+            ]
+        },
+        "tags": [
+            "tourist"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "6599ef8f29fecf6e381737eb"
+        },
+        "name": "Royal Opera House",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -0.12190238003866538,
+                51.513184668986696
+            ]
+        },
+        "tags": [
+            "landmark"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "6599f02429fecf6e381737ec"
+        },
+        "name": "Westbourne Green",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -0.18889906002681922,
+                51.520273116658025
+            ]
+        },
+        "tags": [
+            "nature"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "659b2503d715244da54e8bee"
+        },
+        "name": "Canada Water Docks",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -0.0485277737342904,
+                51.4977509596772
+            ]
+        },
+        "tags": [
+            "misc"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "659b2521d715244da54e8bef"
+        },
+        "name": "Surrey Water",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -0.04576278078105345,
+                51.50320251309292
+            ]
+        },
+        "tags": [
+            "nature",
+            "misc"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "659b2600d715244da54e8bf0"
+        },
+        "name": "Southwark Park",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -0.05358099349931811,
+                51.49405553366833
+            ]
+        },
+        "tags": [
+            "nature"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "659b26b4d715244da54e8bf1"
+        },
+        "name": "Thorburn Square",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -0.06952404811481516,
+                51.49100830561883
+            ]
+        },
+        "tags": [
+            "misc"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "659b2719d715244da54e8bf2"
+        },
+        "name": "Strata",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -0.09932649670841842,
+                51.49308919918071
+            ]
+        },
+        "tags": [
+            "landmark"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "659b276ad715244da54e8bf3"
+        },
+        "name": "U.S. Embassy",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -0.13105102163129878,
+                51.48263580576785
+            ]
+        },
+        "tags": [
+            "landmark"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "659b27dbd715244da54e8bf4"
+        },
+        "name": "Stave Hill",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -0.04048263029105437,
+                51.50111678992375
+            ]
+        },
+        "tags": [
+            "nature",
+            "misc"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "659b2846d715244da54e8bf5"
+        },
+        "name": "The Den",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -0.05230175771759438,
+                51.48600158663196
+            ]
+        },
+        "tags": [
+            "landmark"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "659b2921d715244da54e8bf6"
+        },
+        "name": "Oxleas Woods",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                0.07649498810308408,
+                51.465321071414756
+            ]
+        },
+        "tags": [
+            "nature"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "659b2941d715244da54e8bf7"
+        },
+        "name": "Lesnes Abbey",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                0.12829924065573373,
+                51.48930267073347
+            ]
+        },
+        "tags": [
+            "nature",
+            "misc"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "659b29c1d715244da54e8bf8"
+        },
+        "name": "Lincoln's Inn Fields",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -0.11477569364562346,
+                51.51597860608345
+            ]
+        },
+        "tags": [
+            "nature"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "659b2a4ad715244da54e8bf9"
+        },
+        "name": "South Kensington",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -0.1741584431296972,
+                51.493962613442335
+            ]
+        },
+        "tags": [
+            "misc"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "659b2a76d715244da54e8bfa"
+        },
+        "name": "Gloucester Road",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -0.1826010644990661,
+                51.49441235959534
+            ]
+        },
+        "tags": [
+            "misc"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "659b2aacd715244da54e8bfb"
+        },
+        "name": "Natural History Museum",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -0.17632213582888578,
+                51.495640782224
+            ]
+        },
+        "tags": [
+            "landmark"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "659b2b72d715244da54e8bfc"
+        },
+        "name": "Warwick Avenue",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -0.18402660232670787,
+                51.52330616074187
+            ]
+        },
+        "tags": [
+            "misc"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "659b2bc0d715244da54e8bfd"
+        },
+        "name": "Shepherd's Bush Market",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -0.22624982487492895,
+                51.50535038756627
+            ]
+        },
+        "tags": [
+            "misc",
+            "tourist"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "659b2bdfd715244da54e8bfe"
+        },
+        "name": "Checkpoint",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -0.2261767826882899,
+                51.49872910213655
+            ]
+        },
+        "tags": [
+            "misc"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "659b2c0bd715244da54e8bff"
+        },
+        "name": "Wardo Ave",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -0.2122730281079921,
+                51.47703962222801
+            ]
+        },
+        "tags": [
+            "misc"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "659b2c3dd715244da54e8c00"
+        },
+        "name": "Lennox Gardens",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -0.16371597859468068,
+                51.495772938302736
+            ]
+        },
+        "tags": [
+            "nature",
+            "misc"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "659b2c7dd715244da54e8c01"
+        },
+        "name": "Exhibition Road",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -0.17392276394728734,
+                51.49732018297975
+            ]
+        },
+        "tags": [
+            "misc"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "659b2cb5d715244da54e8c02"
+        },
+        "name": "Mews Arch",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -0.16981308376248672,
+                51.49884802229628
+            ]
+        },
+        "tags": [
+            "misc",
+            "landmark"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "659b2cd6d715244da54e8c03"
+        },
+        "name": "Checkpoint",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -0.13902505344169258,
+                51.489737322093326
+            ]
+        },
+        "tags": [
+            "misc"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "659b2d07d715244da54e8c04"
+        },
+        "name": "Victoria Coach Station",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -0.14805120820158946,
+                51.49250539114355
+            ]
+        },
+        "tags": [
+            "landmark"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "659b2d22d715244da54e8c05"
+        },
+        "name": "Victoria Station",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -0.14342373248685591,
+                51.49586486405097
+            ]
+        },
+        "tags": [
+            "landmark"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "659b2d79d715244da54e8c06"
+        },
+        "name": "Checkpoint",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -0.10021189797380314,
+                51.50072622032537
+            ]
+        },
+        "tags": [
+            "misc"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "659b2d9dd715244da54e8c07"
+        },
+        "name": "Checkpoint",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -0.11790043470956135,
+                51.50230731855898
+            ]
+        },
+        "tags": []
+    },
+    {
+        "_id": {
+            "$oid": "659b2dc2d715244da54e8c08"
+        },
+        "name": "Obelisk",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -0.03535216416096221,
+                51.50678400228377
+            ]
+        },
+        "tags": [
+            "landmark",
+            "misc"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "659b2dd9d715244da54e8c09"
+        },
+        "name": "Pageant Stairs",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -0.03585375542470626,
+                51.50682307149855
+            ]
+        },
+        "tags": [
+            "misc"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "659b2e1ad715244da54e8c0a"
+        },
+        "name": "Old Canal Bridge",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -0.08121986417775506,
+                51.48231175788568
+            ]
+        },
+        "tags": [
+            "nature",
+            "landmark",
+            "misc"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "659b2e50d715244da54e8c0b"
+        },
+        "name": "Checkpoint",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -0.068611596832584,
+                51.49559114174504
+            ]
+        },
+        "tags": [
+            "misc"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "659b2e9fd715244da54e8c0c"
+        },
+        "name": "New Street Square",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -0.10811641627147095,
+                51.515743882976324
+            ]
+        },
+        "tags": [
+            "misc"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "659b2f04d715244da54e8c0d"
+        },
+        "name": "Checkpoint",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -0.11268633558108254,
+                51.515894821186805
+            ]
+        },
+        "tags": [
+            "misc"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "659b2f34d715244da54e8c0e"
+        },
+        "name": "Drury Lane",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -0.12292370201691494,
+                51.5151749997508
+            ]
+        },
+        "tags": [
+            "misc"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "659b3079d715244da54e8c0f"
+        },
+        "name": "Sloane Ave",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -0.16559387285151717,
+                51.492206697947836
+            ]
+        },
+        "tags": [
+            "misc"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "659b30c1d715244da54e8c10"
+        },
+        "name": "Sutherland St",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -0.1451130490381014,
+                51.488382927854786
+            ]
+        },
+        "tags": [
+            "misc"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "659b30e3d715244da54e8c11"
+        },
+        "name": "Warwick Square",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -0.141602231792739,
+                51.49084877163844
+            ]
+        },
+        "tags": []
+    },
+    {
+        "_id": {
+            "$oid": "659b3137d715244da54e8c12"
+        },
+        "name": "Goodge Street",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -0.13439522808739612,
+                51.520560166354585
+            ]
+        },
+        "tags": [
+            "misc"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "659b3182d715244da54e8c13"
+        },
+        "name": "Fitzroy Square",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -0.1404397163076032,
+                51.52324875007662
+            ]
+        },
+        "tags": [
+            "misc"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "659b3220d715244da54e8c14"
+        },
+        "name": "Percy Circus",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -0.11384067685674903,
+                51.52930997655791
+            ]
+        },
+        "tags": [
+            "misc"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "659b32bcd715244da54e8c15"
+        },
+        "name": "Camberwell Submarine",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -0.1061808269309239,
+                51.47480977320377
+            ]
+        },
+        "tags": [
+            "misc"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "659bffaad715244da54e8c16"
+        },
+        "name": "Wandsworth Road",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -0.13906193680457646,
+                51.470364265506824
+            ]
+        },
+        "tags": []
+    },
+    {
+        "_id": {
+            "$oid": "659c0ddfd715244da54e8c17"
+        },
+        "name": "Clarence Ave",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -0.13392370249238672,
+                51.45259118400409
+            ]
+        },
+        "tags": [
+            "misc"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "659c0e7bd715244da54e8c18"
+        },
+        "name": "Glanville Rd",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -0.12409706563905942,
+                51.45532563198883
+            ]
+        },
+        "tags": [
+            "misc"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "659c0ed3d715244da54e8c19"
+        },
+        "name": "Parsons Green",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -0.20078001620911445,
+                51.47529042885063
+            ]
+        },
+        "tags": [
+            "misc"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "659c0f41d715244da54e8c1a"
+        },
+        "name": "Chelsea Harbour",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -0.18041610690509247,
+                51.47544671743063
+            ]
+        },
+        "tags": [
+            "misc"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "659c0fa0d715244da54e8c1b"
+        },
+        "name": "Tower",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -0.1794005298473622,
+                51.477635431150134
+            ]
+        },
+        "tags": [
+            "landmark"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "659c0fecd715244da54e8c1c"
+        },
+        "name": "Kynance Mews",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -0.18510906068967214,
+                51.49737988210615
+            ]
+        },
+        "tags": []
+    },
+    {
+        "_id": {
+            "$oid": "659c103ad715244da54e8c1d"
+        },
+        "name": "Ladbroke Grove",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -0.21001261563843077,
+                51.51732463144011
+            ]
+        },
+        "tags": [
+            "misc"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "659c10cad715244da54e8c1e"
+        },
+        "name": "Portobello Road Market",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -0.2058337521208875,
+                51.516990021008766
+            ]
+        },
+        "tags": [
+            "tourist"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "659c116ad715244da54e8c1f"
+        },
+        "name": "Loftus Rd Stadium",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -0.23275524005745396,
+                51.50988360743152
+            ]
+        },
+        "tags": [
+            "landmark"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "659c1273d715244da54e8c20"
+        },
+        "name": "Queen Caroline St",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -0.22676062900867988,
+                51.48967725421848
+            ]
+        },
+        "tags": [
+            "misc"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "659c12d0d715244da54e8c21"
+        },
+        "name": "Bishop's Park",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -0.21763673993757893,
+                51.47105816676683
+            ]
+        },
+        "tags": [
+            "nature"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "659c1332d715244da54e8c22"
+        },
+        "name": "Abbey Rd",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -0.18338263034820557,
+                51.537097583936706
+            ]
+        },
+        "tags": [
+            "misc"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "659c13b1d715244da54e8c23"
+        },
+        "name": "Lord's",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -0.17095239520109828,
+                51.529152166630894
+            ]
+        },
+        "tags": [
+            "landmark"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "659c1403d715244da54e8c24"
+        },
+        "name": "Granary Square",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -0.12511422872971467,
+                51.535325773522494
+            ]
+        },
+        "tags": [
+            "nature"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "659c1439d715244da54e8c25"
+        },
+        "name": "Lewis Cubitt Park",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -0.1251518726348877,
+                51.538207746919994
+            ]
+        },
+        "tags": [
+            "nature"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "659c1476d715244da54e8c26"
+        },
+        "name": "Mornington Crescent",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -0.13898193714244167,
+                51.534322087644625
+            ]
+        },
+        "tags": [
+            "misc"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "659c14c8d715244da54e8c27"
+        },
+        "name": "Union Chapel",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -0.10288124147689981,
+                51.54476583586165
+            ]
+        },
+        "tags": [
+            "landmark"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "659c202cd715244da54e8c28"
+        },
+        "name": "Portobello Rd",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -0.1990974411921198,
+                51.51136358265082
+            ]
+        },
+        "tags": [
+            "misc"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "659c20f2d715244da54e8c29"
+        },
+        "name": "Acton Town",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -0.2804984113027653,
+                51.50305600689585
+            ]
+        },
+        "tags": [
+            "misc"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "659c2150d715244da54e8c2a"
+        },
+        "name": "Gunnersbury Park",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -0.2918319638015987,
+                51.4963679191766
+            ]
+        },
+        "tags": [
+            "nature"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "659c21e1d715244da54e8c2b"
+        },
+        "name": "Business Park",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -0.2748659881690507,
+                51.49458750843671
+            ]
+        },
+        "tags": [
+            "misc"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "659c221ad715244da54e8c2c"
+        },
+        "name": "Acton Green",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -0.26410631059194056,
+                51.49554893289013
+            ]
+        },
+        "tags": [
+            "nature"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "659c2237d715244da54e8c2d"
+        },
+        "name": "Turnham Green",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -0.2667625035400123,
+                51.49202918125026
+            ]
+        },
+        "tags": [
+            "nature"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "659c22a7d715244da54e8c2e"
+        },
+        "name": "Chiswick High Road",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -0.24744123589617972,
+                51.49326188727939
+            ]
+        },
+        "tags": [
+            "misc"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "659c22d2d715244da54e8c2f"
+        },
+        "name": "Ravenscourt Park",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -0.237787972646486,
+                51.496641279358066
+            ]
+        },
+        "tags": [
+            "nature"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "659c22ffd715244da54e8c30"
+        },
+        "name": "Brook Green",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -0.21927490401456806,
+                51.49587823617826
+            ]
+        },
+        "tags": [
+            "nature"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "659c231dd715244da54e8c31"
+        },
+        "name": "Hammersmith",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -0.2249052277349195,
+                51.49329633666915
+            ]
+        },
+        "tags": [
+            "misc"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "659c237bd715244da54e8c32"
+        },
+        "name": "Chiswick Pier",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -0.25138880790807505,
+                51.482490152549
+            ]
+        },
+        "tags": [
+            "misc"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "659c23cad715244da54e8c33"
+        },
+        "name": "Ealing Common",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -0.2949328306092447,
+                51.510264727394485
+            ]
+        },
+        "tags": [
+            "nature"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "659c2434d715244da54e8c34"
+        },
+        "name": "Ancient Oak",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -0.3092533349990845,
+                51.51684462201191
+            ]
+        },
+        "tags": [
+            "misc"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "65a8fa0274520b0883ff2383"
+        },
+        "name": "Funky crossing",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -0.17016317574105377,
+                51.513722793591306
+            ]
+        },
+        "tags": [
+            "misc"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "65a8fa6c74520b0883ff2384"
+        },
+        "name": "Merchant Sq",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -0.17298755063549498,
+                51.51893922124236
+            ]
+        },
+        "tags": [
+            "nature"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "65a8fb4874520b0883ff2385"
+        },
+        "name": "Nursery Row Park",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -0.09118366928060118,
+                51.49034674484506
+            ]
+        },
+        "tags": [
+            "nature"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "65a8fb9b74520b0883ff2386"
+        },
+        "name": "Newington Gardens",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -0.09547667496164536,
+                51.49815371307566
+            ]
+        },
+        "tags": [
+            "nature"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "65a8fc2674520b0883ff2387"
+        },
+        "name": "Petticoat Lane Market",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -0.0764050974026409,
+                51.51622477390194
+            ]
+        },
+        "tags": [
+            "tourist"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "65a8fc6c74520b0883ff2388"
+        },
+        "name": "Liverpool Street",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -0.0829779523480001,
+                51.517538577254584
+            ]
+        },
+        "tags": [
+            "misc"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "65a8fcac74520b0883ff2389"
+        },
+        "name": "Braham Street",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -0.0724591503456562,
+                51.514165989492554
+            ]
+        },
+        "tags": [
+            "misc"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "65a90e0d74520b0883ff238a"
+        },
+        "name": "Girl with dolphin",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -0.07373660802841187,
+                51.50624492415447
+            ]
+        },
+        "tags": [
+            "misc"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "65a90e6a74520b0883ff238b"
+        },
+        "name": "Marina",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -0.07087452689146234,
+                51.5071143407035
+            ]
+        },
+        "tags": [
+            "misc"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "65a90ee574520b0883ff238c"
+        },
+        "name": "London Street",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -0.07970184087753296,
+                51.511884150093806
+            ]
+        },
+        "tags": [
+            "misc"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "65a90f4074520b0883ff238d"
+        },
+        "name": "Wapping gardens",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -0.06045102151566839,
+                51.50525101805632
+            ]
+        },
+        "tags": [
+            "nature"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "65a90f7b74520b0883ff238e"
+        },
+        "name": "American Square",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -0.07596607290668356,
+                51.511362097869196
+            ]
+        },
+        "tags": [
+            "misc"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "65a90fe174520b0883ff238f"
+        },
+        "name": "Devonshire Square",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -0.07800368315942885,
+                51.516802656477
+            ]
+        },
+        "tags": [
+            "misc"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "65a912f074520b0883ff2390"
+        },
+        "name": "Postman's Park",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -0.09754550735638245,
+                51.51708331863595
+            ]
+        },
+        "tags": [
+            "misc"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "65a913fe74520b0883ff2391"
+        },
+        "name": "Butcher's Hall",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -0.09903202126177124,
+                51.51823003672849
+            ]
+        },
+        "tags": [
+            "landmark"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "65a9144974520b0883ff2392"
+        },
+        "name": "Blackfriars Lane",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -0.10296409333269585,
+                51.51320923339281
+            ]
+        },
+        "tags": [
+            "misc"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "65a914c074520b0883ff2393"
+        },
+        "name": "King's Bench Walk",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -0.10918435950905359,
+                51.5124011973722
+            ]
+        },
+        "tags": [
+            "misc"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "65a9151674520b0883ff2394"
+        },
+        "name": "Sion Hall",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -0.10629169851845477,
+                51.5113474815941
+            ]
+        },
+        "tags": [
+            "landmark"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "65a915b074520b0883ff2395"
+        },
+        "name": "Millford Lane",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -0.11198522086745655,
+                51.51171202139267
+            ]
+        },
+        "tags": [
+            "misc"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "65a915f674520b0883ff2396"
+        },
+        "name": "Temple",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -0.11431907550744302,
+                51.51110784581178
+            ]
+        },
+        "tags": [
+            "misc"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "65ad952fd75836849e514922"
+        },
+        "name": "Love Lane",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -0.09363117725507131,
+                51.5163984923929
+            ]
+        },
+        "tags": [
+            "misc"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "65ad959ed75836849e514923"
+        },
+        "name": "St Olaves Ct",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -0.09132877430343855,
+                51.51438718489071
+            ]
+        },
+        "tags": [
+            "misc"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "65ad968ad75836849e514924"
+        },
+        "name": "Devonshire Row",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -0.0802163029361469,
+                51.516869093277265
+            ]
+        },
+        "tags": [
+            "misc"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "65ad96d9d75836849e514925"
+        },
+        "name": "Tokenhouse Yard",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -0.08838939256283096,
+                51.515207619180494
+            ]
+        },
+        "tags": [
+            "misc"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "65ad9749d75836849e514926"
+        },
+        "name": "Earl Street",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -0.08370123372187344,
+                51.52064388235322
+            ]
+        },
+        "tags": [
+            "misc"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "65ad97a2d75836849e514927"
+        },
+        "name": "Viscount Street",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -0.09534865711566143,
+                51.52100706797745
+            ]
+        },
+        "tags": [
+            "misc"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "65ae6361d75836849e514928"
+        },
+        "name": "Larkhall Park",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -0.12903502581721238,
+                51.47380792608788
+            ]
+        },
+        "tags": [
+            "nature"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "65ae63d1d75836849e514929"
+        },
+        "name": "Brockwell Park",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -0.10488307459263213,
+                51.45307291356532
+            ]
+        },
+        "tags": [
+            "nature"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "65ae63fcd75836849e51492a"
+        },
+        "name": "Corry Drive",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -0.10763539184757809,
+                51.46137515687076
+            ]
+        },
+        "tags": [
+            "misc"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "65ae6457d75836849e51492b"
+        },
+        "name": "Fiveways Road",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -0.10832044165515864,
+                51.46955708013833
+            ]
+        },
+        "tags": [
+            "misc"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "65ae648fd75836849e51492c"
+        },
+        "name": "Stockwell Park Cres",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -0.11804256314286388,
+                51.47206379637236
+            ]
+        },
+        "tags": [
+            "misc"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "65ae64c7d75836849e51492d"
+        },
+        "name": "Dalyell Road",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -0.11956114244139338,
+                51.46585255095715
+            ]
+        },
+        "tags": [
+            "misc"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "65ae652ed75836849e51492e"
+        },
+        "name": "Gosling Way",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -0.11162408870452278,
+                51.47435346037157
+            ]
+        },
+        "tags": [
+            "misc"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "65ae6566d75836849e51492f"
+        },
+        "name": "Myatt's Field",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -0.10835719813897526,
+                51.47515880344703
+            ]
+        },
+        "tags": [
+            "nature"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "65ae65d4d75836849e514930"
+        },
+        "name": "Loughborough Junction",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -0.1018900054149885,
+                51.46613221163361
+            ]
+        },
+        "tags": [
+            "misc"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "65ae65fdd75836849e514931"
+        },
+        "name": "Foxley Road",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -0.10743808048700787,
+                51.478746686784326
+            ]
+        },
+        "tags": [
+            "misc"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "65ae6643d75836849e514932"
+        },
+        "name": "Leandro Place",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -0.11937487731620955,
+                51.48026054559697
+            ]
+        },
+        "tags": [
+            "misc"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "65ae6667d75836849e514933"
+        },
+        "name": "Wilcox Close",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -0.12508376747383698,
+                51.479411470733936
+            ]
+        },
+        "tags": [
+            "misc"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "65ae66e0d75836849e514934"
+        },
+        "name": "Loughborough Park",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -0.1040038325730408,
+                51.46236492379583
+            ]
+        },
+        "tags": [
+            "nature"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "65ae671cd75836849e514935"
+        },
+        "name": "Brixton Station Road",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -0.11157406217412458,
+                51.46320705325695
+            ]
+        },
+        "tags": [
+            "misc"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "65ae6781d75836849e514936"
+        },
+        "name": "Max Roach Park",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -0.11096313536680169,
+                51.46632635902565
+            ]
+        },
+        "tags": [
+            "nature"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "65ae67e8d75836849e514937"
+        },
+        "name": "Slade Gardens",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -0.11536240150645805,
+                51.4704652570119
+            ]
+        },
+        "tags": [
+            "nature"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "65ae6828d75836849e514938"
+        },
+        "name": "St Lawrence Way",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -0.11002722037785295,
+                51.471560957299594
+            ]
+        },
+        "tags": [
+            "misc"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "664730934198588d75bee5a1"
+        },
+        "name": "Paragon Rd",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -0.05380178482623954,
+                51.54468348776055
+            ]
+        },
+        "tags": [
+            "misc"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "664730cb4198588d75bee5a2"
+        },
+        "name": "Victoria Park",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -0.04122508321401597,
+                51.53587071543558
+            ]
+        },
+        "tags": [
+            "nature"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "664731114198588d75bee5a3"
+        },
+        "name": "Garden",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -0.01838339716011772,
+                51.54006788799976
+            ]
+        },
+        "tags": [
+            "nature"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "664731704198588d75bee5a4"
+        },
+        "name": "ArcelorMittal Orbit",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -0.01339170046578797,
+                51.538539522949044
+            ]
+        },
+        "tags": [
+            "landmark",
+            "tourist"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "664734454198588d75bee5a5"
+        },
+        "name": "London Fields",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -0.06017804145812988,
+                51.54181783566167
+            ]
+        },
+        "tags": [
+            "nature"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "6647349e4198588d75bee5a6"
+        },
+        "name": "Bridge",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -0.03358820530459994,
+                51.51656912303645
+            ]
+        },
+        "tags": [
+            "misc"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "664735754198588d75bee5a7"
+        },
+        "name": "The Cow",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -0.19532978348897556,
+                51.51926278074896
+            ]
+        },
+        "tags": [
+            "bar/pub"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "664735d04198588d75bee5a8"
+        },
+        "name": "Westbourne Park Villas",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -0.19046967340373477,
+                51.51881671519179
+            ]
+        },
+        "tags": [
+            "misc"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "6647363d4198588d75bee5a9"
+        },
+        "name": "Crompton Street",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -0.17711647828297927,
+                51.52340681348307
+            ]
+        },
+        "tags": [
+            "misc"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "664736b54198588d75bee5aa"
+        },
+        "name": "Millennium Bridge",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -0.09850244899111571,
+                51.509683605317086
+            ]
+        },
+        "tags": [
+            "tourist",
+            "landmark"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "6647402d4198588d75bee5ab"
+        },
+        "name": "William Parnell Park",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -0.18826365381099608,
+                51.47382312261779
+            ]
+        },
+        "tags": [
+            "nature"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "664740674198588d75bee5ac"
+        },
+        "name": "Imperial Park",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -0.18286594188059446,
+                51.471362740308216
+            ]
+        },
+        "tags": [
+            "nature"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "664740c84198588d75bee5ad"
+        },
+        "name": "London Bridge",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -0.0878159245146426,
+                51.50768319115034
+            ]
+        },
+        "tags": [
+            "landmark"
+        ]
+    },
+    {
+        "_id": {
+            "$oid": "664741444198588d75bee5ae"
+        },
+        "name": "Nice view",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -0.11735916134966828,
+                51.50915130200734
+            ]
+        },
+        "tags": [
+            "tourist"
+        ]
+    }
+]
