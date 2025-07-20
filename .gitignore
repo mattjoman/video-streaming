@@ -38,3 +38,7 @@ terraform.rc
 # Ignore local development files
 .idea/
 .vscode/ 
+
+# Python
+__pycache__/
+venv/
