@@ -1,8 +1,13 @@
 import requests
 import json
 
+
+API_URL = "http://localhost:3000"
+#API_URL = "https://1s8iexdsog.execute-api.eu-west-1.amazonaws.com"
+
+
 def generate_mission(n: int, r: int, location: list[float], tags: list[str], cptSource: str="database"):
-    url = "http://localhost:3000/checkpoints/generate-mission"
+    url = f"{API_URL}/checkpoints/generate-mission"
     body = {
         "name": "",
         "n": n,
@@ -19,14 +24,15 @@ def generate_mission(n: int, r: int, location: list[float], tags: list[str], cpt
 
 
 def generate_and_save_mission():
-    mission = generate_mission(n=2, r=1, location=[-0.086, 51.518], tags=[])
-    #mission["config"]["name"] = 'testName'
+    mission = generate_mission(n=2, r=0.1, location=[-0.086, 51.518], tags=[])
+    mission["config"]["name"] = 'testName'
 
-    url = "http://localhost:3000/missions"
+    url = f"{API_URL}/missions"
     response = requests.post(url, json=mission)
     print(response.json())
+    print(response.status_code)
 
 
 if __name__ == "__main__":
-    print(generate_mission(n=2, r=1, location=[-0.086, 51.518], tags=[]))
+    #print(generate_mission(n=2, r=1, location=[-0.086, 51.518], tags=[]))
     generate_and_save_mission()
