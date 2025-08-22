@@ -1,9 +1,10 @@
 import { createSlice } from '@reduxjs/toolkit';
+import { MissionConfig } from '../../types';
 
-const initialState = {
+const initialState: MissionConfig = {
   name: '',
-  n: 5,
-  r: 10,
+  n: 3,
+  r: undefined,
   location: {
     type: 'Point',
     coordinates: [-0.086, 51.518]
