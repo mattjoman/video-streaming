@@ -1,24 +1,27 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { updateMissionConfig } from '../store/slices/missionConfigSlice';
+import { updateCreateMissionConfig } from '../store/slices/createMissionConfigSlice';
+import { setCreatedMission } from '../store/slices/createdMissionSlice';
 import { generateMission } from '../services/missionService';
 import { MissionConfig } from '../types';
 
 const CreateMission = () => {
   const dispatch = useDispatch();
-  const missionConfig = useSelector((state: any) => state.missionConfig);
+  const createMissionConfig = useSelector((state: any) => state.createMissionConfig);
+  const createdMission = useSelector((state: any) => state.createdMission);
 
   const handleGenerateMission = async () => {
     try {
-      const mission = await generateMission(missionConfig);
+      const mission = await generateMission(createMissionConfig);
       console.log('Generated mission:', mission);
+      dispatch(setCreatedMission(mission));
     } catch (error) {
       console.error('Failed to generate mission:', error);
     }
   };
 
   const updateConfig = (updates: Partial<MissionConfig>) => {
-    dispatch(updateMissionConfig(updates));
+    dispatch(updateCreateMissionConfig(updates));
   };
 
   return (
@@ -28,7 +31,7 @@ const CreateMission = () => {
       <div>
         <label>Name: </label>
         <input 
-          value={missionConfig.name} 
+          value={createMissionConfig.name} 
           onChange={(e) => updateConfig({ name: e.target.value })}
           placeholder="Mission name"
         />
@@ -38,7 +41,7 @@ const CreateMission = () => {
         <label>Number of checkpoints: </label>
         <input 
           type="number" 
-          value={missionConfig.n} 
+          value={createMissionConfig.n} 
           onChange={(e) => updateConfig({ n: parseInt(e.target.value) })}
           min="1" 
           max="50"
@@ -48,7 +51,7 @@ const CreateMission = () => {
       <div>
         <label>Tags: </label>
         <input 
-          value={missionConfig.tags.join(', ')} 
+          value={createMissionConfig.tags.join(', ')} 
           onChange={(e) => updateConfig({ tags: e.target.value.split(',').map(tag => tag.trim()) })}
           placeholder="nature, scenic"
         />
@@ -58,7 +61,8 @@ const CreateMission = () => {
         Generate Mission
       </button>
 
-      <pre>{JSON.stringify(missionConfig, null, 2)}</pre>
+      <pre>{JSON.stringify(createMissionConfig, null, 2)}</pre>
+      <pre>{JSON.stringify(createdMission, null, 2)}</pre>
     </div>
   );
 };

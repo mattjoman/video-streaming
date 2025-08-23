@@ -13,16 +13,16 @@ const initialState: MissionConfig = {
   cptSource: 'database'
 };
 
-const missionConfigSlice = createSlice({
-  name: 'missionConfig',
+const createMissionConfigSlice = createSlice({
+  name: 'createMissionConfig',
   initialState,
   reducers: {
-    updateMissionConfig: (state, action) => {
+    updateCreateMissionConfig: (state, action) => {
       return { ...state, ...action.payload };
     },
-    resetMissionConfig: () => initialState,
+    resetCreateMissionConfig: () => initialState,
   },
 });
 
-export const { updateMissionConfig, resetMissionConfig } = missionConfigSlice.actions;
-export default missionConfigSlice.reducer;
+export const { updateCreateMissionConfig, resetCreateMissionConfig } = createMissionConfigSlice.actions;
+export default createMissionConfigSlice.reducer;
