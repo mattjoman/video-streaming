@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import './App.css'
-import Home from './pages/Home'
+import Navigation from './components/Navigation'
 
 function App() {
   useEffect(() => {
@@ -79,7 +79,7 @@ function App() {
 
   return (
     <div>
-      <Home />
+      <Navigation />
     </div>
   )
 }
