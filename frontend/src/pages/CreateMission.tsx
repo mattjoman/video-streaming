@@ -2,7 +2,7 @@ import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { updateCreateMissionConfig } from '../store/slices/createMissionConfigSlice';
 import { setCreatedMission } from '../store/slices/createdMissionSlice';
-import { generateMission } from '../services/missionService';
+import { generateMission, saveMission } from '../services/missionService';
 import { MissionConfig } from '../types';
 
 const CreateMission = () => {
@@ -17,6 +17,15 @@ const CreateMission = () => {
       dispatch(setCreatedMission(mission));
     } catch (error) {
       console.error('Failed to generate mission:', error);
+    }
+  };
+
+  const handleSaveMission = async () => {
+    try {
+      const mission = await saveMission(createdMission);
+      console.log('Saved mission:', mission);
+    } catch (error) {
+      console.error('Failed to save mission:', error);
     }
   };
 
@@ -63,6 +72,10 @@ const CreateMission = () => {
 
       <pre>{JSON.stringify(createMissionConfig, null, 2)}</pre>
       <pre>{JSON.stringify(createdMission, null, 2)}</pre>
+
+      <button onClick={handleSaveMission}>
+        Save Mission
+      </button>
     </div>
   );
 };
