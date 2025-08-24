@@ -1,21 +1,9 @@
 import { AttemptCheckpoint } from './checkpoint';
-
-export interface MissionAttemptConfig {
-  //missionId: string;
-  isCompleted: 1 | 0;
-  name: string;
-  n: number;
-  r?: number;
-  location?: {
-    type: 'Point';
-    coordinates: [number, number];
-  };
-  tags: string[];
-  cptSource?: string;
-}
+import { MissionConfig } from './mission';
 
 export interface MissionAttempt {
-  config?: MissionAttemptConfig;
+  isCompleted: 0 | 1;
+  config?: MissionConfig;
   checkpoints?: AttemptCheckpoint[];
 }
 

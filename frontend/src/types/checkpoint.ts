@@ -8,7 +8,7 @@ export interface Checkpoint {
 }
 
 export interface AttemptCheckpoint {
-  isVisited: 1 | 0;
+  isVisited: 0 | 1;
   name: string;
   location: {
     type: 'Point';
