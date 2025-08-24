@@ -1,6 +1,6 @@
 import { Controller, Get, Post, Query, Body } from '@nestjs/common';
 import { CheckpointService } from '../services/checkpoint.service';
-import { MissionConfigDto } from '../dto/mission-config.dto';
+import { MissionConfigDto } from '../dto/mission.dto';
 
 @Controller('checkpoints')
 export class CheckpointController {

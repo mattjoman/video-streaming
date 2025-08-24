@@ -1,9 +1,9 @@
 import { IsObject, IsNumber, IsArray, IsString, Min, Max, IsOptional, ValidateNested } from 'class-validator';
 import { Type } from 'class-transformer';
 import { GeoJsonPointDto } from './geo-json.dto';
-import { CheckpointDto } from './checkpoint.dto';
+import { AttemptCheckpointDto } from './checkpoint.dto';
 
-export class MissionConfigDto {
+export class MissionAttemptConfigDto {
   @IsString()
   @IsOptional()
   name?: string;
@@ -31,14 +31,14 @@ export class MissionConfigDto {
   cptSource?: string;
 } 
 
-export class MissionDto {
+export class MissionAttemptDto {
   @IsObject()
   @ValidateNested()
-  @Type(() => MissionConfigDto)
-  config: MissionConfigDto;
+  @Type(() => MissionAttemptConfigDto)
+  config: MissionAttemptConfigDto;
 
   @IsArray()
   @ValidateNested({ each: true })
-  @Type(() => CheckpointDto)
-  checkpoints: CheckpointDto[];
+  @Type(() => AttemptCheckpointDto)
+  checkpoints: AttemptCheckpointDto[];
 } 

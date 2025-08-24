@@ -2,8 +2,7 @@ import { Injectable } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
 import { Model } from 'mongoose';
 import { Checkpoint, CheckpointDocument } from '../schemas/checkpoint.schema';
-import { MissionConfigDto } from '../dto/mission-config.dto';
-import { MissionDto } from '../dto/mission.dto';
+import { MissionConfigDto, MissionDto } from '../dto/mission.dto';
 
 @Injectable()
 export class CheckpointService {

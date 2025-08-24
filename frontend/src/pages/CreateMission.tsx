@@ -1,8 +1,11 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
+import { pushPage } from '../store/slices/pageHistorySlice';
 import { updateCreateMissionConfig } from '../store/slices/createMissionConfigSlice';
 import { setCreatedMission } from '../store/slices/createdMissionSlice';
+import { setMissionAttempt } from '../store/slices/missionAttemptSlice';
 import { generateMission, saveMission } from '../services/missionService';
+import { startMissionAttempt } from '../services/missionAttemptService';
 import { MissionConfig } from '../types';
 
 const CreateMission = () => {
@@ -26,6 +29,17 @@ const CreateMission = () => {
       console.log('Saved mission:', mission);
     } catch (error) {
       console.error('Failed to save mission:', error);
+    }
+  };
+
+  const handleStartMissionAttempt = async () => {
+    try {
+      const missionAttempt = await startMissionAttempt(createdMission);
+      console.log('Mission attempt:', missionAttempt);
+      dispatch(setMissionAttempt(missionAttempt));
+      dispatch(pushPage('attempt-mission'));
+    } catch (error) {
+      console.error('Failed to start mission:', error);
     }
   };
 
@@ -75,6 +89,10 @@ const CreateMission = () => {
 
       <button onClick={handleSaveMission}>
         Save Mission
+      </button>
+
+      <button onClick={handleStartMissionAttempt}>
+        Start Mission Attempt
       </button>
     </div>
   );
