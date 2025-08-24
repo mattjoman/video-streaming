@@ -9,6 +9,8 @@ import { MissionController } from './controllers/mission.controller';
 import { MissionService } from './services/mission.service';
 import { Mission, MissionSchema } from './schemas/mission.schema';
 import { LoggerMiddleware } from './middleware/logger.middleware';
+import { MissionAttemptService } from './services/mission-attempt.service';
+import { MissionAttemptController } from './controllers/mission-attempt.controller';
 
 @Module({
   imports: [
@@ -25,8 +27,8 @@ import { LoggerMiddleware } from './middleware/logger.middleware';
       { name: Mission.name, schema: MissionSchema }
     ]),
   ],
-  controllers: [AppController, CheckpointController, MissionController],
-  providers: [CheckpointService, MissionService],
+  controllers: [AppController, CheckpointController, MissionController, MissionAttemptController],
+  providers: [CheckpointService, MissionService, MissionAttemptService],
 })
 export class AppModule implements NestModule {
   configure(consumer: MiddlewareConsumer) {
