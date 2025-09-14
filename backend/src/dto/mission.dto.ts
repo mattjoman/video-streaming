@@ -32,6 +32,9 @@ export class MissionConfigDto {
 } 
 
 export class MissionDto {
+  @IsString()
+  _id: string;
+
   @IsObject()
   @ValidateNested()
   @Type(() => MissionConfigDto)

@@ -4,6 +4,9 @@ import { AttemptCheckpointDto } from './checkpoint.dto';
 import { MissionConfigDto } from './mission.dto';
 
 export class MissionAttemptDto {
+  @IsString()
+  _missionId: string;
+
   @IsNumber()
   @Min(0)
   @Max(1)

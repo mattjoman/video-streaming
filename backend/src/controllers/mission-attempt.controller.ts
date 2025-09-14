@@ -8,7 +8,7 @@ export class MissionAttemptController {
   constructor(private readonly missionAttemptService: MissionAttemptService) {}
 
   @Post('/start')
-  async startMissionAttempt(@Body() mission: MissionDto) {
+  async startMissionAttempt(@Body() mission: Partial<MissionDto>) {
     try {
       return await this.missionAttemptService.startMissionAttempt(mission);
     } catch (error) {

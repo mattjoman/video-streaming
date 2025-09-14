@@ -5,6 +5,9 @@ export type CheckpointDocument = Checkpoint & Document;
 
 @Schema({ collection: 'checkpoints' })
 export class Checkpoint {
+  @Prop({ type: String, required: true })
+  _id: string;
+
   @Prop({ required: true })
   name: string;
 
@@ -29,11 +32,3 @@ export class Checkpoint {
 }
 
 export const CheckpointSchema = SchemaFactory.createForClass(Checkpoint);
-
-// Remove _id from all outputs
-CheckpointSchema.set('toJSON', {
-  transform: (doc, ret) => {
-    delete ret._id;
-    return ret;
-  }
-}); 
