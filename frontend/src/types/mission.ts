@@ -13,6 +13,7 @@ export interface MissionConfig {
 }
 
 export interface Mission {
+  _id: string;
   config: MissionConfig;
   checkpoints: Checkpoint[];
 }

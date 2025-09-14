@@ -26,6 +26,7 @@ const CreateMission = () => {
   const handleSaveMission = async () => {
     try {
       const mission = await saveMission(createdMission);
+      dispatch(setCreatedMission(mission));
       console.log('Saved mission:', mission);
     } catch (error) {
       console.error('Failed to save mission:', error);
