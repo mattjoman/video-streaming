@@ -4,6 +4,9 @@ import { Type } from 'class-transformer';
 
 export class CheckpointDto {
   @IsString()
+  _id: string;
+
+  @IsString()
   name: string;
 
   @ValidateNested()
@@ -16,6 +19,9 @@ export class CheckpointDto {
 }
 
 export class AttemptCheckpointDto {
+  @IsString()
+  _id: string;
+
   @IsNumber()
   @Min(0)
   @Max(1)
