@@ -1,23 +1,24 @@
 import React from 'react';
-import { GoogleMap, useJsApiLoader } from '@react-google-maps/api';
+import { Map, APIProvider, AdvancedMarker } from '@vis.gl/react-google-maps';
 
-export default function Map() {
+const googleMapsApiKey = import.meta.env.VITE_GOOGLE_MAPS_API_KEY;
 
-  const { isLoaded } = useJsApiLoader({
-    id: 'google-map-script',
-    googleMapsApiKey: import.meta.env.VITE_GOOGLE_MAPS_API_KEY,
-  });
-  console.log(import.meta.env.VITE_GOOGLE_MAPS_API_KEY);
+export default function MyMap() {
 
   return (
     <div>
       <h1>Map</h1>
-      {isLoaded ? (
-        <GoogleMap mapContainerStyle={{ width: '70vw', height: '100vh' }} center={{ lat: 0, lng: 0 }} zoom={10}>
-        </GoogleMap>
-      ) : (
-        <div>Loading...</div>
-      )}
+      <APIProvider apiKey={googleMapsApiKey} libraries={['marker']}>
+        <Map
+          mapId="map"
+          defaultCenter={{ lat: 0, lng: 0 }}
+          defaultZoom={5}
+          style={{ width: '70vw', height: '100vh' }}
+        >
+          <AdvancedMarker position={{ lat: 0, lng: 0 }} />
+        </Map>
+      </APIProvider>
     </div>
   )
 }
+
