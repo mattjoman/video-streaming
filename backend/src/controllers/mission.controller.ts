@@ -7,7 +7,7 @@ export class MissionController {
   constructor(private readonly missionService: MissionService) {}
 
   @Post()
-  async saveMission(@Body() missionData: MissionDto) {
+  async saveMission(@Body() missionData: Partial<MissionDto>) {
     try {
       return await this.missionService.saveMission(missionData);
     } catch (error) {

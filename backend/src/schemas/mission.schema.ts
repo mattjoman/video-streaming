@@ -14,10 +14,9 @@ export class Mission {
 
 export const MissionSchema = SchemaFactory.createForClass(Mission);
 
-// Remove _id and __v from all outputs
+// Remove __v from all outputs
 MissionSchema.set('toJSON', {
   transform: (doc, ret) => {
-    delete ret._id;
     delete ret.__v;
     return ret;
   }

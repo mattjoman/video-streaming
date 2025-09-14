@@ -1,6 +1,6 @@
 import { Controller, Get, Post, Query, Body } from '@nestjs/common';
 import { CheckpointService } from '../services/checkpoint.service';
-import { MissionConfigDto } from '../dto/mission.dto';
+import { MissionConfigDto, MissionDto } from '../dto/mission.dto';
 
 @Controller('checkpoints')
 export class CheckpointController {
@@ -13,7 +13,7 @@ export class CheckpointController {
   }
 
   @Post('generate-mission')
-  async generateMission(@Body() config: MissionConfigDto) {
+  async generateMission(@Body() config: MissionConfigDto): Promise<Partial<MissionDto>> {
     return await this.checkpointService.generateMission(config);
   }
 } 

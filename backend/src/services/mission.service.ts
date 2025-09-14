@@ -10,7 +10,7 @@ export class MissionService {
     @InjectModel(Mission.name) private readonly missionModel: Model<MissionDocument>,
   ) {}
 
-  async saveMission(missionData: MissionDto): Promise<Mission> {
+  async saveMission(missionData: Partial<MissionDto>): Promise<Mission> {
     try {
       console.log('Attempting to save mission:', JSON.stringify(missionData, null, 2));
       

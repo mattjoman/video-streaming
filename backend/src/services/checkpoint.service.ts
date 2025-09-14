@@ -14,7 +14,7 @@ export class CheckpointService {
     return this.checkpointModel.find().limit(n).exec();
   }
 
-  async generateMission(config: MissionConfigDto): Promise<MissionDto> {
+  async generateMission(config: MissionConfigDto): Promise<Partial<MissionDto>> {
     let query: any = {};
     
     // Filter by tags if tags array is not empty
