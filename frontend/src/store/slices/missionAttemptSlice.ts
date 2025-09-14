@@ -12,7 +12,7 @@ const initialState: MissionAttempt = {
   checkpoints: []
 };
 */
-const initialState: MissionAttempt = {};
+const initialState: Partial<MissionAttempt> = {};
 
 const missionAttemptSlice = createSlice({
   name: 'missionAttempt',

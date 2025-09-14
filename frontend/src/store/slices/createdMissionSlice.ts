@@ -1,7 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit';
 import { Mission } from '../../types';
 
-const initialState: Mission | Object = {};
+const initialState: Partial<Mission> = {};
 
 const createdMissionSlice = createSlice({
   name: 'createdMission',
