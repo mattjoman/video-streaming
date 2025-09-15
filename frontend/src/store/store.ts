@@ -3,6 +3,7 @@ import createMissionConfigReducer from './slices/createMissionConfigSlice';
 import createdMissionReducer from './slices/createdMissionSlice';
 import missionAttemptReducer from './slices/missionAttemptSlice';
 import pageHistoryReducer from './slices/pageHistorySlice';
+import mapReducer from './slices/mapSlice';
 
 export const store = configureStore({
   reducer: {
@@ -10,6 +11,7 @@ export const store = configureStore({
     createdMission: createdMissionReducer,
     missionAttempt: missionAttemptReducer,
     pageHistory: pageHistoryReducer,
+    map: mapReducer,
   },
 });
 

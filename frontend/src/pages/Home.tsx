@@ -1,6 +1,13 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
+import { mapSetActive } from '../store/slices/mapSlice';
 
 const Home = () => {
+
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(mapSetActive(false));
+  }, [dispatch]);
 
   return (
     <div>

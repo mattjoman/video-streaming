@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { pushPage } from '../store/slices/pageHistorySlice';
 import { updateCreateMissionConfig } from '../store/slices/createMissionConfigSlice';
 import { setCreatedMission } from '../store/slices/createdMissionSlice';
 import { setMissionAttempt } from '../store/slices/missionAttemptSlice';
+import { mapSetActive } from '../store/slices/mapSlice';
 import { generateMission, saveMission } from '../services/missionService';
 import { startMissionAttempt } from '../services/missionAttemptService';
 import { MissionConfig } from '../types';
@@ -12,6 +13,10 @@ const CreateMission = () => {
   const dispatch = useDispatch();
   const createMissionConfig = useSelector((state: any) => state.createMissionConfig);
   const createdMission = useSelector((state: any) => state.createdMission);
+
+  useEffect(() => {
+    dispatch(mapSetActive(true));
+  }, [dispatch]);
 
   const handleGenerateMission = async () => {
     try {
