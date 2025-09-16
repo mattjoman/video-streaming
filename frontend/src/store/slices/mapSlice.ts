@@ -14,17 +14,11 @@ const mapSlice = createSlice({
   name: 'map',
   initialState,
   reducers: {
-    mapSetType: (state, action) => {
-      state.mapType = action.payload;
-    },
-    mapSetActive: (state, action) => {
-      state.active = action.payload;
-    },
-    mapSetActiveMarker: (state, action) => {
-      state.activeMarker = action.payload;
+    mapUpdate: (state, action) => {
+      return { ...state, ...action.payload };
     },
   }
 });
 
-export const { mapSetType, mapSetActive, mapSetActiveMarker } = mapSlice.actions;
+export const { mapUpdate } = mapSlice.actions;
 export default mapSlice.reducer;

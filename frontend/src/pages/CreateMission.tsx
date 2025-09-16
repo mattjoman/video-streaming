@@ -4,7 +4,7 @@ import { pushPage } from '../store/slices/pageHistorySlice';
 import { updateCreateMissionConfig } from '../store/slices/createMissionConfigSlice';
 import { setCreatedMission } from '../store/slices/createdMissionSlice';
 import { setMissionAttempt } from '../store/slices/missionAttemptSlice';
-import { mapSetActive } from '../store/slices/mapSlice';
+import { mapUpdate } from '../store/slices/mapSlice';
 import { generateMission, saveMission } from '../services/missionService';
 import { startMissionAttempt } from '../services/missionAttemptService';
 import { MissionConfig } from '../types';
@@ -15,7 +15,7 @@ const CreateMission = () => {
   const createdMission = useSelector((state: any) => state.createdMission);
 
   useEffect(() => {
-    dispatch(mapSetActive(true));
+    dispatch(mapUpdate({ active: true }));
   }, [dispatch]);
 
   const handleGenerateMission = async () => {

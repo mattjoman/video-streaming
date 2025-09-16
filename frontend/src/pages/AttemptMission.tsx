@@ -1,12 +1,12 @@
 import React, { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
-import { mapSetActive } from '../store/slices/mapSlice';
+import { mapUpdate } from '../store/slices/mapSlice';
 
 export default function AttemptMission() {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(mapSetActive(true));
+    dispatch(mapUpdate({ active: true }));
   }, [dispatch]);
 
   return (
