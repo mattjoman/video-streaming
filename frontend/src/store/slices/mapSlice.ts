@@ -2,12 +2,13 @@ import { createSlice } from "@reduxjs/toolkit";
 
 
 const initialState: any = {
-  mapType: '',
+  // general
+  mapType: '', // create, attempt, search
   active: false,
 
-  // both types
+  // type: 'create'
+  location: null,
   activeMarker: null,
-  loc: null,
 };
 
 const mapSlice = createSlice({

@@ -2,7 +2,6 @@ import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { pushPage, popPage } from '../store/slices/pageHistorySlice';
 import Home from '../pages/Home';
-import MyMap from './Map';
 import CreateMission from '../pages/CreateMission';
 import AttemptMission from '../pages/AttemptMission';
 import SearchMissions from '../pages/SearchMissions';
@@ -40,9 +39,6 @@ export default function Navigation() {
         {history[history.length - 1] === 'attempt-mission' ? (<AttemptMission />) : (<></>)}
         {history[history.length - 1] === 'search-missions' ? (<SearchMissions />) : (<></>)}
         {history[history.length - 1] === 'create-checkpoint' ? (<CreateCheckpoint />) : (<></>)}
-      </div>
-      <div>
-        <MyMap />
       </div>
     </div>
   );

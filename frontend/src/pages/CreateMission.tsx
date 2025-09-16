@@ -8,6 +8,7 @@ import { mapUpdate } from '../store/slices/mapSlice';
 import { generateMission, saveMission } from '../services/missionService';
 import { startMissionAttempt } from '../services/missionAttemptService';
 import { MissionConfig } from '../types';
+import CreateMissionMap from '../components/Maps/CreateMissionMap';
 
 const CreateMission = () => {
   const dispatch = useDispatch();
@@ -56,7 +57,9 @@ const CreateMission = () => {
   return (
     <div>
       <h1>Mission Generator</h1>
-      
+
+      <CreateMissionMap />
+
       <div>
         <label>Name: </label>
         <input 
