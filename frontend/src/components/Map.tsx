@@ -1,6 +1,7 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-import { Map, APIProvider, AdvancedMarker } from '@vis.gl/react-google-maps';
+import { Map, APIProvider } from '@vis.gl/react-google-maps';
+import DisplayCreatedMission from './MapModes/DisplayCreatedMission';
 
 const googleMapsApiKey = import.meta.env.VITE_GOOGLE_MAPS_API_KEY;
 
@@ -18,7 +19,7 @@ export default function MyMap() {
           defaultZoom={5}
           style={{ width: '100%', height: '100%' }}
         >
-          <AdvancedMarker position={{ lat: 0, lng: 0 }} />
+          <DisplayCreatedMission />
         </Map>
       </APIProvider>
     </div>
