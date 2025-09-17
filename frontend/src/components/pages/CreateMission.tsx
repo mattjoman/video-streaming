@@ -1,23 +1,18 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { pushPage } from '../store/slices/pageHistorySlice';
-import { updateCreateMissionConfig } from '../store/slices/createMissionConfigSlice';
-import { setCreatedMission } from '../store/slices/createdMissionSlice';
-import { setMissionAttempt } from '../store/slices/missionAttemptSlice';
-import { mapUpdate } from '../store/slices/mapSlice';
-import { generateMission, saveMission } from '../services/missionService';
-import { startMissionAttempt } from '../services/missionAttemptService';
-import { MissionConfig } from '../types';
-import CreateMissionMap from '../components/Maps/CreateMissionMap';
+import { pushPage } from '../../store/slices/pageHistorySlice';
+import { updateCreateMissionConfig } from '../../store/slices/createMissionConfigSlice';
+import { setCreatedMission } from '../../store/slices/createdMissionSlice';
+import { setMissionAttempt } from '../../store/slices/missionAttemptSlice';
+import { generateMission, saveMission } from '../../services/missionService';
+import { startMissionAttempt } from '../../services/missionAttemptService';
+import { MissionConfig } from '../../types';
+import CreateMissionMap from '../../components/Maps/CreateMissionMap';
 
 function CreateMission() {
   const dispatch = useDispatch();
   const createMissionConfig = useSelector((state: any) => state.createMissionConfig);
   const createdMission = useSelector((state: any) => state.createdMission);
-
-  useEffect(() => {
-    dispatch(mapUpdate({ active: true }));
-  }, [dispatch]);
 
   const handleGenerateMission = async () => {
     try {
