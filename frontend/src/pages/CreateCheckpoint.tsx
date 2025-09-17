@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { mapUpdate } from '../store/slices/mapSlice';
 
-export default function CreateCheckpoint() {
+function CreateCheckpoint() {
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -15,3 +15,6 @@ export default function CreateCheckpoint() {
     </div>
   )
 }
+
+export default CreateCheckpoint;
+export { CreateCheckpoint };

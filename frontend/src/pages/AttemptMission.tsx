@@ -1,7 +1,7 @@
 import React from 'react';
 import AttemptMissionMap from '../components/Maps/AttemptMissionMap';
 
-export default function AttemptMission() {
+function AttemptMission() {
 
   return (
     <div>
@@ -10,3 +10,6 @@ export default function AttemptMission() {
     </div>
   )
 }
+
+export default AttemptMission;
+export { AttemptMission };

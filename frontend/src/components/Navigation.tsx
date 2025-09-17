@@ -1,11 +1,7 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { pushPage, popPage } from '../store/slices/pageHistorySlice';
-import Home from '../pages/Home';
-import CreateMission from '../pages/CreateMission';
-import AttemptMission from '../pages/AttemptMission';
-import SearchMissions from '../pages/SearchMissions';
-import CreateCheckpoint from '../pages/CreateCheckpoint';
+import { Home, CreateMission, AttemptMission, SearchMissions, CreateCheckpoint } from '../pages';
 
 const pages = [
   { id: 'home', display: 'Home' },

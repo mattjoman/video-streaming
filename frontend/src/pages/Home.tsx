@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { mapUpdate } from '../store/slices/mapSlice';
 
-const Home = () => {
+function Home() {
 
   const dispatch = useDispatch();
   useEffect(() => {
@@ -17,3 +17,4 @@ const Home = () => {
 };
 
 export default Home;
+export { Home };

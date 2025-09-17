@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { mapUpdate } from '../store/slices/mapSlice';
 
-export default function SearchMissions() {
+function SearchMissions() {
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -15,3 +15,6 @@ export default function SearchMissions() {
     </div>
   )
 }
+
+export default SearchMissions;
+export { SearchMissions };

@@ -10,7 +10,7 @@ import { startMissionAttempt } from '../services/missionAttemptService';
 import { MissionConfig } from '../types';
 import CreateMissionMap from '../components/Maps/CreateMissionMap';
 
-const CreateMission = () => {
+function CreateMission() {
   const dispatch = useDispatch();
   const createMissionConfig = useSelector((state: any) => state.createMissionConfig);
   const createdMission = useSelector((state: any) => state.createdMission);
@@ -108,3 +108,4 @@ const CreateMission = () => {
 };
 
 export default CreateMission;
+export { CreateMission };
