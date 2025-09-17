@@ -1,7 +1,7 @@
 import React from 'react';
 import { Map, AdvancedMarker } from '@vis.gl/react-google-maps';
 
-export default function AttemptMissionMap() {
+function AttemptMissionMap() {
   return (
     <Map reuseMaps={true} mapId="map" colorScheme="LIGHT" renderingType="RASTER"
       defaultCenter={{ lat: 0, lng: 0 }}
@@ -13,3 +13,5 @@ export default function AttemptMissionMap() {
   )
 }
 
+export default AttemptMissionMap;
+export { AttemptMissionMap };

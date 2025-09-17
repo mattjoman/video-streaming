@@ -7,7 +7,7 @@ import { setMissionAttempt } from '../../store/slices/missionAttemptSlice';
 import { generateMission, saveMission } from '../../services/missionService';
 import { startMissionAttempt } from '../../services/missionAttemptService';
 import { MissionConfig } from '../../types';
-import CreateMissionMap from '../../components/Maps/CreateMissionMap';
+import { CreateMissionMap } from '../Maps';
 
 function CreateMission() {
   const dispatch = useDispatch();

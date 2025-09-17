@@ -2,7 +2,7 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 import { Map, AdvancedMarker } from '@vis.gl/react-google-maps';
 
-export default function CreateMissionMap() {
+function CreateMissionMap() {
   const createMissionConfig = useSelector((state: any) => state.createMissionConfig);
   const createdMission = useSelector((state: any) => state.createdMission);
   return (
@@ -19,4 +19,5 @@ export default function CreateMissionMap() {
   )
 }
 
-
+export default CreateMissionMap;
+export { CreateMissionMap };

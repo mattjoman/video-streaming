@@ -1,5 +1,5 @@
 import React from 'react';
-import AttemptMissionMap from '../../components/Maps/AttemptMissionMap';
+import { AttemptMissionMap } from '../Maps';
 
 function AttemptMission() {
 
