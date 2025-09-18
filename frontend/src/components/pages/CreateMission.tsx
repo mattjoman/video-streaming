@@ -65,28 +65,47 @@ function CreateMission() {
       </div>
 
       <div>
-        <label>Number of checkpoints: </label>
-        <input 
-          type="number" 
-          value={createMissionConfig.n} 
-          onChange={(e) => updateConfig({ n: parseInt(e.target.value) })}
-          min="1" 
-          max="50"
-        />
+        <label>Source: </label>
+        <select 
+          value={createMissionConfig.cptSource} 
+          onChange={(e) => updateConfig({ cptSource: e.target.value })}
+        >
+          <option value="database">Database</option>
+          <option value="random">Random</option>
+          <option value="manual">Manual</option>
+        </select>
       </div>
 
-      <div>
-        <label>Tags: </label>
-        <input 
-          value={createMissionConfig.tags.join(', ')} 
-          onChange={(e) => updateConfig({ tags: e.target.value.split(',').map(tag => tag.trim()) })}
-          placeholder="nature, scenic"
-        />
-      </div>
+      {(createMissionConfig.cptSource === 'database' || createMissionConfig.cptSource === 'random') && (
+        <div>
+          <label>Number of checkpoints: </label>
+          <input 
+            type="number" 
+            value={createMissionConfig.n} 
+            onChange={(e) => updateConfig({ n: parseInt(e.target.value) })}
+            min="1" 
+            max="50"
+          />
+        </div>
+      )}
 
-      <button onClick={handleGenerateMission}>
-        Generate Mission
-      </button>
+      {createMissionConfig.cptSource === 'database' && (
+        <div>
+          <label>Tags: </label>
+          <input 
+            value={createMissionConfig.tags.join(', ')} 
+            onChange={(e) => updateConfig({ tags: e.target.value.split(',').map(tag => tag.trim()) })}
+            placeholder="nature, scenic"
+          />
+        </div>
+      )}
+
+      {(createMissionConfig.cptSource === 'database' || createMissionConfig.cptSource === 'random') && (
+        <button onClick={handleGenerateMission}>
+          Generate Mission
+        </button>
+      )}
+
 
       <pre>{JSON.stringify(createMissionConfig, null, 2)}</pre>
       <pre>{JSON.stringify(createdMission, null, 2)}</pre>
