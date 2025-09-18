@@ -4,7 +4,7 @@ import { MissionConfig } from '../../types';
 const initialState: MissionConfig = {
   name: '',
   n: 3,
-  r: undefined,
+  r: 10,
   location: {
     type: 'Point',
     coordinates: [-0.086, 51.518]
