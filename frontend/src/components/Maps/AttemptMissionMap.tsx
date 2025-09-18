@@ -1,7 +1,8 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { Map, AdvancedMarker } from '@vis.gl/react-google-maps';
+import { Map } from '@vis.gl/react-google-maps';
 import { AttemptCheckpoint } from '../../types';
+import { CheckpointMarker } from './CheckpointMarker';
 
 function AttemptMissionMap() {
   const dispatch = useDispatch();
@@ -15,7 +16,7 @@ function AttemptMissionMap() {
       style={{ width: '100vh', height: '50vh' }}
     >
       {missionAttempt?.checkpoints && missionAttempt.checkpoints.map((checkpoint: AttemptCheckpoint, idx: number) => (
-        <AdvancedMarker key={idx} position={{ lng: checkpoint.location.coordinates[0], lat: checkpoint.location.coordinates[1] }} />
+        <CheckpointMarker key={idx} position={{ lng: checkpoint.location.coordinates[0], lat: checkpoint.location.coordinates[1] }} />
       ))}
     </Map>
   )

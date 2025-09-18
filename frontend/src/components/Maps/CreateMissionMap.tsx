@@ -1,8 +1,10 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { Map, AdvancedMarker } from '@vis.gl/react-google-maps';
+import { Map } from '@vis.gl/react-google-maps';
 import { Checkpoint } from '../../types';
 import { updateCreateMissionConfig } from '../../store/slices/createMissionConfigSlice';
+import { CheckpointMarker } from './CheckpointMarker';
+import { SelectedLocationMarker } from './SelectedLocationMarker';
 
 function CreateMissionMap() {
   const dispatch = useDispatch();
@@ -21,9 +23,9 @@ function CreateMissionMap() {
       style={{ width: '100vh', height: '50vh' }}
       onClick={handleMapClick}
     >
-      <AdvancedMarker position={{ lng: createMissionConfig.location.coordinates[0], lat: createMissionConfig.location.coordinates[1] }} />
+      <SelectedLocationMarker position={{ lng: createMissionConfig.location.coordinates[0], lat: createMissionConfig.location.coordinates[1] }} />
       {createdMission?.checkpoints && createdMission.checkpoints.map((checkpoint: Checkpoint, idx: number) => (
-        <AdvancedMarker key={idx} position={{ lat: checkpoint.location.coordinates[1], lng: checkpoint.location.coordinates[0] }} />
+        <CheckpointMarker key={idx} position={{ lng: checkpoint.location.coordinates[0], lat: checkpoint.location.coordinates[1] }} />
       ))}
     </Map>
   )
