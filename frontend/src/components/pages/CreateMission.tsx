@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { pushPage } from '../../store/slices/pageHistorySlice';
 import { updateCreateMissionConfig } from '../../store/slices/createMissionConfigSlice';
-import { resetCreatedMissionCheckpoints, setCreatedMission } from '../../store/slices/createdMissionSlice';
+import { resetCreatedMissionCheckpoints, setCreatedMission, updateCreatedMission } from '../../store/slices/createdMissionSlice';
 import { setMissionAttempt } from '../../store/slices/missionAttemptSlice';
 import { generateMission, saveMission } from '../../services/missionService';
 import { startMissionAttempt } from '../../services/missionAttemptService';
@@ -16,7 +16,7 @@ function CreateMission() {
 
   // Reset checkpoints when cptSource changes
   useEffect(() => {
-    dispatch(resetCreatedMissionCheckpoints());
+    dispatch(resetCreatedMissionCheckpoints(createMissionConfig.cptSource));
   }, [createMissionConfig.cptSource]);
 
   const handleGenerateMission = async () => {
@@ -60,14 +60,25 @@ function CreateMission() {
 
       <CreateMissionMap />
 
-      <div>
-        <label>Name: </label>
-        <input
-          value={createMissionConfig.name} 
-          onChange={(e) => updateConfig({ name: e.target.value })}
-          placeholder="Mission name"
-        />
-      </div>
+      {createMissionConfig.cptSource === 'manual' ? (
+        <div>
+          <label>Name: </label>
+          <input
+            value={createdMission.config.name} 
+            onChange={(e) => dispatch(updateCreatedMission({ config: { ...createdMission.config, name: e.target.value } }))}
+            placeholder="Mission name"
+          />
+        </div>
+      ) : (
+        <div>
+          <label>Name: </label>
+          <input
+            value={createMissionConfig.name} 
+            onChange={(e) => updateConfig({ name: e.target.value })}
+            placeholder="Mission name"
+          />
+        </div>
+      )}
 
       <div>
         <label>Source: </label>
@@ -112,8 +123,11 @@ function CreateMission() {
       )}
 
 
+      {/*
       <pre>{JSON.stringify(createMissionConfig, null, 2)}</pre>
       <pre>{JSON.stringify(createdMission, null, 2)}</pre>
+      */}
+      <pre>{JSON.stringify(createdMission.config, null, 2)}</pre>
 
       <button onClick={handleSaveMission}>
         Save Mission
