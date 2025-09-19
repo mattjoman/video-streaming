@@ -6,6 +6,38 @@ import { updateCreateMissionConfig } from '../../store/slices/createMissionConfi
 import { CheckpointMarker } from './CheckpointMarker';
 import { SelectedLocationMarker } from './SelectedLocationMarker';
 
+function ManualMode() {
+  const dispatch = useDispatch();
+
+  const createMissionConfig = useSelector((state: any) => state.createMissionConfig);
+  const createdMission = useSelector((state: any) => state.createdMission);
+
+  return (
+    <>
+      <SelectedLocationMarker position={{ lng: createMissionConfig.location.coordinates[0], lat: createMissionConfig.location.coordinates[1] }} />
+      {createdMission?.checkpoints && createdMission.checkpoints.map((checkpoint: Checkpoint, idx: number) => (
+        <CheckpointMarker key={idx} position={{ lng: checkpoint.location.coordinates[0], lat: checkpoint.location.coordinates[1] }} />
+      ))}
+    </>
+  )
+}
+
+function DatabaseAndRandomModes() {
+  const dispatch = useDispatch();
+
+  const createMissionConfig = useSelector((state: any) => state.createMissionConfig);
+  const createdMission = useSelector((state: any) => state.createdMission);
+
+  return (
+    <>
+      <SelectedLocationMarker position={{ lng: createMissionConfig.location.coordinates[0], lat: createMissionConfig.location.coordinates[1] }} />
+      {createdMission?.checkpoints && createdMission.checkpoints.map((checkpoint: Checkpoint, idx: number) => (
+        <CheckpointMarker key={idx} position={{ lng: checkpoint.location.coordinates[0], lat: checkpoint.location.coordinates[1] }} />
+      ))}
+    </>
+  )
+}
+
 function CreateMissionMap() {
   const dispatch = useDispatch();
 
@@ -23,10 +55,11 @@ function CreateMissionMap() {
       style={{ width: '100vh', height: '50vh' }}
       onClick={handleMapClick}
     >
-      <SelectedLocationMarker position={{ lng: createMissionConfig.location.coordinates[0], lat: createMissionConfig.location.coordinates[1] }} />
-      {createdMission?.checkpoints && createdMission.checkpoints.map((checkpoint: Checkpoint, idx: number) => (
-        <CheckpointMarker key={idx} position={{ lng: checkpoint.location.coordinates[0], lat: checkpoint.location.coordinates[1] }} />
-      ))}
+      {createMissionConfig.cptSource === 'manual' ? (
+        <ManualMode />
+      ) : (
+        <DatabaseAndRandomModes />
+      )}
     </Map>
   )
 }

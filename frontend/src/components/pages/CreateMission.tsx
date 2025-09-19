@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { pushPage } from '../../store/slices/pageHistorySlice';
 import { updateCreateMissionConfig } from '../../store/slices/createMissionConfigSlice';
-import { setCreatedMission } from '../../store/slices/createdMissionSlice';
+import { resetCreatedMissionCheckpoints, setCreatedMission } from '../../store/slices/createdMissionSlice';
 import { setMissionAttempt } from '../../store/slices/missionAttemptSlice';
 import { generateMission, saveMission } from '../../services/missionService';
 import { startMissionAttempt } from '../../services/missionAttemptService';
@@ -13,6 +13,11 @@ function CreateMission() {
   const dispatch = useDispatch();
   const createMissionConfig = useSelector((state: any) => state.createMissionConfig);
   const createdMission = useSelector((state: any) => state.createdMission);
+
+  // Reset checkpoints when cptSource changes
+  useEffect(() => {
+    dispatch(resetCreatedMissionCheckpoints());
+  }, [createMissionConfig.cptSource]);
 
   const handleGenerateMission = async () => {
     try {
@@ -57,7 +62,7 @@ function CreateMission() {
 
       <div>
         <label>Name: </label>
-        <input 
+        <input
           value={createMissionConfig.name} 
           onChange={(e) => updateConfig({ name: e.target.value })}
           placeholder="Mission name"
