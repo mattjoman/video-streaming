@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { pushPage } from '../../store/slices/pageHistorySlice';
 import { updateCreateMissionConfig } from '../../store/slices/createMissionConfigSlice';
-import { resetCreatedMissionCheckpoints, setCreatedMission, updateCreatedMission } from '../../store/slices/createdMissionSlice';
+import { setCreatedMission, updateCreatedMission } from '../../store/slices/createdMissionSlice';
 import { setMissionAttempt } from '../../store/slices/missionAttemptSlice';
 import { generateMission, saveMission } from '../../services/missionService';
 import { startMissionAttempt } from '../../services/missionAttemptService';
@@ -13,11 +13,6 @@ function CreateMission() {
   const dispatch = useDispatch();
   const createMissionConfig = useSelector((state: any) => state.createMissionConfig);
   const createdMission = useSelector((state: any) => state.createdMission);
-
-  // Reset checkpoints when cptSource changes
-  useEffect(() => {
-    dispatch(resetCreatedMissionCheckpoints(createMissionConfig.cptSource));
-  }, [createMissionConfig.cptSource]);
 
   const handleGenerateMission = async () => {
     try {
@@ -58,27 +53,16 @@ function CreateMission() {
     <div>
       <h1>Mission Generator</h1>
 
-      <CreateMissionMap />
+      <CreateMissionMap isManualMission={false} />
 
-      {createMissionConfig.cptSource === 'manual' ? (
-        <div>
-          <label>Name: </label>
-          <input
-            value={createdMission.config.name} 
-            onChange={(e) => dispatch(updateCreatedMission({ config: { ...createdMission.config, name: e.target.value } }))}
-            placeholder="Mission name"
-          />
-        </div>
-      ) : (
-        <div>
-          <label>Name: </label>
-          <input
-            value={createMissionConfig.name} 
-            onChange={(e) => updateConfig({ name: e.target.value })}
-            placeholder="Mission name"
-          />
-        </div>
-      )}
+      <div>
+        <label>Name: </label>
+        <input
+          value={createMissionConfig.name} 
+          onChange={(e) => updateConfig({ name: e.target.value })}
+          placeholder="Mission name"
+        />
+      </div>
 
       <div>
         <label>Source: </label>
@@ -88,22 +72,19 @@ function CreateMission() {
         >
           <option value="database">Database</option>
           <option value="random">Random</option>
-          <option value="manual">Manual</option>
         </select>
       </div>
 
-      {(createMissionConfig.cptSource === 'database' || createMissionConfig.cptSource === 'random') && (
-        <div>
-          <label>Number of checkpoints: </label>
-          <input 
-            type="number" 
-            value={createMissionConfig.n} 
-            onChange={(e) => updateConfig({ n: parseInt(e.target.value) })}
-            min="1" 
-            max="50"
-          />
-        </div>
-      )}
+      <div>
+        <label>Number of checkpoints: </label>
+        <input 
+          type="number" 
+          value={createMissionConfig.n} 
+          onChange={(e) => updateConfig({ n: parseInt(e.target.value) })}
+          min="1" 
+          max="50"
+        />
+      </div>
 
       {createMissionConfig.cptSource === 'database' && (
         <div>
@@ -116,12 +97,9 @@ function CreateMission() {
         </div>
       )}
 
-      {(createMissionConfig.cptSource === 'database' || createMissionConfig.cptSource === 'random') && (
-        <button onClick={handleGenerateMission}>
-          Generate Mission
-        </button>
-      )}
-
+      <button onClick={handleGenerateMission}>
+        Generate Mission
+      </button>
 
       {/*
       <pre>{JSON.stringify(createMissionConfig, null, 2)}</pre>

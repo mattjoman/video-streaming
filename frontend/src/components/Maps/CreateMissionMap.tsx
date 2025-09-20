@@ -6,18 +6,18 @@ import { updateCreateMissionConfig } from '../../store/slices/createMissionConfi
 import { CheckpointMarker } from './CheckpointMarker';
 import { VisitedCheckpointMarker } from './VisitedCheckpointMarker';
 import { SelectedLocationMarker } from './SelectedLocationMarker';
-import { addCreatedMissionCheckpoint, removeCreatedMissionCheckpoint } from '../../store/slices/createdMissionSlice';
+import { addCreatedManualMissionCheckpoint, removeCreatedManualMissionCheckpoint, updateCreatedManualMission } from '../../store/slices/createdManualMissionSlice';
 
 function ManualMode({ manualSelectedIdx, setManualSelectedIdx }: { manualSelectedIdx: number | null, setManualSelectedIdx: (idx: number | null) => void }) {
   const dispatch = useDispatch();
 
-  const createMissionConfig = useSelector((state: any) => state.createMissionConfig);
-  const createdMission = useSelector((state: any) => state.createdMission);
+  const createdManualMission = useSelector((state: any) => state.createdManualMission);
+
 
   return (
     <>
-      <SelectedLocationMarker position={{ lng: createMissionConfig.location.coordinates[0], lat: createMissionConfig.location.coordinates[1] }} />
-      {createdMission?.checkpoints && createdMission.checkpoints.map((checkpoint: Checkpoint, idx: number) => {
+      <SelectedLocationMarker position={{ lng: createdManualMission.config.location.coordinates[0], lat: createdManualMission.config.location.coordinates[1] }} />
+      {createdManualMission?.checkpoints && createdManualMission.checkpoints.map((checkpoint: Checkpoint, idx: number) => {
         return (
           <>
             {manualSelectedIdx === idx ? (
@@ -52,24 +52,26 @@ function DatabaseAndRandomModes() {
   )
 }
 
-function CreateMissionMap() {
+function CreateMissionMap({ isManualMission = false }: { isManualMission: boolean }) {
   const dispatch = useDispatch();
 
   const createMissionConfig = useSelector((state: any) => state.createMissionConfig);
+  const createdManualMission = useSelector((state: any) => state.createdManualMission);
 
   const [manualSelectedIdx, setManualSelectedIdx] = useState<number | null>(null);
 
   const handleMapClick = (e: any) => {
     dispatch(updateCreateMissionConfig({ location: { type: 'Point', coordinates: [e.detail.latLng.lng, e.detail.latLng.lat] } }));
+    dispatch(updateCreatedManualMission({ config: { ...createdManualMission.config, location: { type: 'Point', coordinates: [e.detail.latLng.lng, e.detail.latLng.lat] } } }));
   }
 
   const handleAddCheckpoint = () => {
-    dispatch(addCreatedMissionCheckpoint(createMissionConfig.location));
+    dispatch(addCreatedManualMissionCheckpoint(createMissionConfig.location));
     setManualSelectedIdx(null);
   }
 
   const handleRemoveCheckpoint = () => {
-    dispatch(removeCreatedMissionCheckpoint(manualSelectedIdx));
+    dispatch(removeCreatedManualMissionCheckpoint(manualSelectedIdx));
     setManualSelectedIdx(null);
   }
 
@@ -81,13 +83,13 @@ function CreateMissionMap() {
         style={{ width: '100vh', height: '50vh' }}
         onClick={handleMapClick}
       >
-        {createMissionConfig.cptSource === 'manual' ? (
+        {isManualMission ? (
           <ManualMode manualSelectedIdx={manualSelectedIdx} setManualSelectedIdx={setManualSelectedIdx} />
         ) : (
           <DatabaseAndRandomModes />
         )}
       </Map>
-      {createMissionConfig.cptSource === 'manual' && (
+      {isManualMission && (
         <>
           {manualSelectedIdx !== null && (
             <button onClick={handleRemoveCheckpoint}>Remove Checkpoint</button>

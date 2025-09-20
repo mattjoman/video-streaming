@@ -5,4 +5,3 @@
 - When generating missions, make sure the checkpoints are randomly selected, not just the 'top 3 that fit the config criteria'
 
 ## Frontend
-- Reduce complexity by having a separate `createdMissionSlice` called `manualCreatedMissionSlice`, and a separate `CreateManualMission` component
