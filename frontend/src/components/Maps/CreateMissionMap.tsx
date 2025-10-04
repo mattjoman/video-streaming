@@ -9,10 +9,8 @@ import { SelectedLocationMarker } from './SelectedLocationMarker';
 import { addCreatedManualMissionCheckpoint, removeCreatedManualMissionCheckpoint, updateCreatedManualMission } from '../../store/slices/createdManualMissionSlice';
 
 function ManualMode({ manualSelectedIdx, setManualSelectedIdx }: { manualSelectedIdx: number | null, setManualSelectedIdx: (idx: number | null) => void }) {
-  const dispatch = useDispatch();
 
   const createdManualMission = useSelector((state: any) => state.createdManualMission);
-
 
   return (
     <>
@@ -37,7 +35,6 @@ function ManualMode({ manualSelectedIdx, setManualSelectedIdx }: { manualSelecte
 }
 
 function DatabaseAndRandomModes() {
-  const dispatch = useDispatch();
 
   const createMissionConfig = useSelector((state: any) => state.createMissionConfig);
   const createdMission = useSelector((state: any) => state.createdMission);

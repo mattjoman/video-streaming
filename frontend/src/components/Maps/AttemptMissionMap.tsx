@@ -16,7 +16,7 @@ function AttemptMissionMap() {
       style={{ width: '100vh', height: '50vh' }}
     >
       {missionAttempt?.checkpoints && missionAttempt.checkpoints.map((checkpoint: AttemptCheckpoint, idx: number) => (
-        <CheckpointMarker key={idx} position={{ lng: checkpoint.location.coordinates[0], lat: checkpoint.location.coordinates[1] }} />
+        <CheckpointMarker key={idx} position={{ lng: checkpoint.location.coordinates[0], lat: checkpoint.location.coordinates[1] }} selectCheckpoint={() => null} />
       ))}
     </Map>
   )
