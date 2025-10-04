@@ -1,13 +1,15 @@
 import React from 'react';
-import { useSelector, useDispatch } from 'react-redux';
+import { useSelector } from 'react-redux';
+import { useLocation, useLocationTest } from '../../hooks';
 import { Map } from '@vis.gl/react-google-maps';
 import { AttemptCheckpoint } from '../../types';
 import { CheckpointMarker } from './CheckpointMarker';
+import { UserLocationMarker } from './UserLocationMarker';
 
 function AttemptMissionMap() {
-  const dispatch = useDispatch();
 
   const missionAttempt = useSelector((state: any) => state.missionAttempt);
+  const location = useLocationTest();
 
   return (
     <Map reuseMaps={true} mapId="map" colorScheme="LIGHT" renderingType="RASTER"
@@ -18,6 +20,7 @@ function AttemptMissionMap() {
       {missionAttempt?.checkpoints && missionAttempt.checkpoints.map((checkpoint: AttemptCheckpoint, idx: number) => (
         <CheckpointMarker key={idx} position={{ lng: checkpoint.location.coordinates[0], lat: checkpoint.location.coordinates[1] }} selectCheckpoint={() => null} />
       ))}
+      <UserLocationMarker position={location} />
     </Map>
   )
 }
