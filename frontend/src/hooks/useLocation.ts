@@ -8,22 +8,21 @@ function useLocation() {
   const getUserLocation = () => {
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(position => {
-        const l = {            // ADDED
-          lat: position.coords.latitude,  // ADDED
-          lng: position.coords.longitude, // ADDED
-        };
-        console.log(l);
-        setLoc(l);
+        console.log('position', position);
+        setLoc({lat: position.coords.latitude, lng: position.coords.longitude});
       });
     } else {
       console.log("Browser does not support geolocation");
     }
   };
 
-  setTimeout(() => {
-    getUserLocation();
-    clearTimeout();
-  }, 2000);
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      console.log('getting user location');
+      getUserLocation();
+    }, 2000);
+    return () => clearInterval(intervalId);
+  }, []);
 
   return loc;
 }
@@ -34,11 +33,11 @@ function useLocationTest() {
   const [loc, setLoc] = useState({lat: 51.5, lng: - 0.010});
 
   useEffect(() => {
-    setTimeout(() => {
-      setLoc({lat: loc.lat, lng: loc.lng + 0.005});
-      clearTimeout();
+    const intervalId = setInterval(() => {
+      setLoc(prevLoc => ({lat: prevLoc.lat, lng: prevLoc.lng + 0.005}));
     }, 2000);
-  }, [loc, setLoc]);
+    return () => clearInterval(intervalId);
+  }, []);
 
   return loc;
 }
