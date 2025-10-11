@@ -8,6 +8,7 @@ import { generateMission, saveMission } from '../../services/missionService';
 import { startMissionAttempt } from '../../services/missionAttemptService';
 import { MissionConfig } from '../../types';
 import { CreateMissionMap } from '../Maps';
+import { MultiChoiceInput, NumberInput, TextInput } from '../common';
 
 function CreateMission() {
   const dispatch = useDispatch();
@@ -55,36 +56,26 @@ function CreateMission() {
 
       <CreateMissionMap isManualMission={false} />
 
-      <div>
-        <label>Name: </label>
-        <input
-          value={createMissionConfig.name} 
-          onChange={(e) => updateConfig({ name: e.target.value })}
-          placeholder="Mission name"
-        />
-      </div>
+      <TextInput
+        label="Name: "
+        value={createMissionConfig.name}
+        onChange={(value) => updateConfig({ name: value })}
+        placeholder="Mission name"
+      />
 
-      <div>
-        <label>Source: </label>
-        <select 
-          value={createMissionConfig.cptSource} 
-          onChange={(e) => updateConfig({ cptSource: e.target.value })}
-        >
-          <option value="database">Database</option>
-          <option value="random">Random</option>
-        </select>
-      </div>
+      <MultiChoiceInput
+        label="Source: "
+        options={[{ value: 'database', label: 'Database' }, { value: 'random', label: 'Random' }]}
+        value={createMissionConfig.cptSource}
+        setValue={(value: string) => updateConfig({ cptSource: value })}
+      />
 
-      <div>
-        <label>Number of checkpoints: </label>
-        <input 
-          type="number" 
-          value={createMissionConfig.n} 
-          onChange={(e) => updateConfig({ n: parseInt(e.target.value) })}
-          min="1" 
-          max="50"
-        />
-      </div>
+      <NumberInput
+        label="Number of checkpoints: "
+        value={createMissionConfig.n}
+        onChange={(value) => updateConfig({ n: value })}
+        placeholder="3"
+      />
 
       {createMissionConfig.cptSource === 'database' && (
         <div>
@@ -100,12 +91,6 @@ function CreateMission() {
       <button onClick={handleGenerateMission}>
         Generate Mission
       </button>
-
-      {/*
-      <pre>{JSON.stringify(createMissionConfig, null, 2)}</pre>
-      <pre>{JSON.stringify(createdMission, null, 2)}</pre>
-      */}
-      <pre>{JSON.stringify(createdMission.config, null, 2)}</pre>
 
       <button onClick={handleSaveMission}>
         Save Mission
