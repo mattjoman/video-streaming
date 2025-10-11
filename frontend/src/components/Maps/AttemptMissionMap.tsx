@@ -16,7 +16,10 @@ function AttemptMissionMap() {
   const location = useLocationTest();
 
   useEffect(() => {
-    //for (const checkpoint of missionAttempt.checkpoints) {
+
+    if (!missionAttempt.checkpoints)
+      return;
+
     for (let idx = 0; idx < missionAttempt.checkpoints.length; idx++) {
       const checkpoint = missionAttempt.checkpoints[idx];
       if (isAtCheckpoint(location, {lng: checkpoint.location.coordinates[0], lat: checkpoint.location.coordinates[1]})) {
