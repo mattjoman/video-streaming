@@ -8,7 +8,7 @@ import { generateMission, saveMission } from '../../services/missionService';
 import { startMissionAttempt } from '../../services/missionAttemptService';
 import { MissionConfig } from '../../types';
 import { CreateMissionMap } from '../Maps';
-import { MultiChoiceInput, NumberInput, TextInput } from '../common';
+import { MultiChoiceInput, NumberInput, TagSelector, TextInput } from '../common';
 
 function CreateMission() {
   const dispatch = useDispatch();
@@ -78,14 +78,10 @@ function CreateMission() {
       />
 
       {createMissionConfig.cptSource === 'database' && (
-        <div>
-          <label>Tags: </label>
-          <input 
-            value={createMissionConfig.tags.join(', ')} 
-            onChange={(e) => updateConfig({ tags: e.target.value.split(',').map(tag => tag.trim()) })}
-            placeholder="nature, scenic"
-          />
-        </div>
+        <TagSelector
+          tags={createMissionConfig.tags}
+          onChange={(tags: string[]) => updateConfig({ tags: tags })}
+        />
       )}
 
       <button onClick={handleGenerateMission}>
