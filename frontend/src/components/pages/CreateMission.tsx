@@ -1,8 +1,8 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { pushPage } from '../../store/slices/pageHistorySlice';
 import { updateCreateMissionConfig } from '../../store/slices/createMissionConfigSlice';
-import { setCreatedMission, updateCreatedMission } from '../../store/slices/createdMissionSlice';
+import { setCreatedMission } from '../../store/slices/createdMissionSlice';
 import { setMissionAttempt } from '../../store/slices/missionAttemptSlice';
 import { generateMission, saveMission } from '../../services/missionService';
 import { startMissionAttempt } from '../../services/missionAttemptService';
@@ -59,7 +59,7 @@ function CreateMission() {
       <TextInput
         label="Name: "
         value={createMissionConfig.name}
-        onChange={(value) => updateConfig({ name: value })}
+        onChange={(value: string) => updateConfig({ name: value })}
         placeholder="Mission name"
       />
 
@@ -68,6 +68,13 @@ function CreateMission() {
         options={[{ value: 'database', label: 'Database' }, { value: 'random', label: 'Random' }]}
         value={createMissionConfig.cptSource}
         setValue={(value: string) => updateConfig({ cptSource: value })}
+      />
+
+      <NumberInput
+        label="Radius (km): "
+        value={createMissionConfig.r}
+        onChange={(value) => updateConfig({ r: value })}
+        placeholder="10"
       />
 
       <NumberInput
@@ -85,16 +92,20 @@ function CreateMission() {
       )}
 
       <button onClick={handleGenerateMission}>
-        Generate Mission
+        New Mission
       </button>
 
-      <button onClick={handleSaveMission}>
-        Save Mission
-      </button>
+      {createdMission.checkpoints.length > 0 && createdMission.config.name !== '' && (
+        <button onClick={handleSaveMission}>
+          Save Mission
+        </button>
+      )}
 
-      <button onClick={handleStartMissionAttempt}>
-        Start Mission Attempt
-      </button>
+      {createdMission.checkpoints.length > 0 && (
+        <button onClick={handleStartMissionAttempt}>
+          Begin Mission
+        </button>
+      )}
     </div>
   );
 };

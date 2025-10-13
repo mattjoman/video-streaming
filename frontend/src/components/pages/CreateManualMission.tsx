@@ -1,13 +1,12 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { pushPage } from '../../store/slices/pageHistorySlice';
-import { updateCreateMissionConfig } from '../../store/slices/createMissionConfigSlice';
 import { updateCreatedManualMission, setCreatedManualMission } from '../../store/slices/createdManualMissionSlice';
 import { setMissionAttempt } from '../../store/slices/missionAttemptSlice';
 import { saveMission } from '../../services/missionService';
 import { startMissionAttempt } from '../../services/missionAttemptService';
-import { MissionConfig } from '../../types';
 import { CreateMissionMap } from '../Maps';
+import { TextInput } from '../common';
 
 function CreateManualMission() {
   const dispatch = useDispatch();
@@ -34,8 +33,8 @@ function CreateManualMission() {
     }
   };
 
-  const updateConfig = (updates: Partial<MissionConfig>) => {
-    dispatch(updateCreateMissionConfig(updates));
+  const updateMissionName = (value: string) => {
+    dispatch(updateCreatedManualMission({ config: { ...createdManualMission.config, name: value } }));
   };
 
   return (
@@ -44,28 +43,24 @@ function CreateManualMission() {
 
       <CreateMissionMap isManualMission={true} />
 
-      <div>
-        <label>Name: </label>
-        <input
-          value={createdManualMission.config.name} 
-          onChange={(e) => dispatch(updateCreatedManualMission({ config: { ...createdManualMission.config, name: e.target.value } }))}
-          placeholder="Mission name"
-        />
-      </div>
+      <TextInput
+        label="Name: "
+        value={createdManualMission.config.name}
+        onChange={(value: string) => updateMissionName(value)}
+        placeholder="Mission name"
+      />
 
-      {/*
-      <pre>{JSON.stringify(createMissionConfig, null, 2)}</pre>
-      <pre>{JSON.stringify(createdMission, null, 2)}</pre>
-      */}
-      <pre>{JSON.stringify(createdManualMission.config, null, 2)}</pre>
+      {createdManualMission.checkpoints.length > 0 && createdManualMission.config.name !== '' && (
+        <button onClick={handleSaveMission}>
+          Save Mission
+        </button>
+      )}
 
-      <button onClick={handleSaveMission}>
-        Save Mission
-      </button>
-
-      <button onClick={handleStartMissionAttempt}>
-        Start Mission Attempt
-      </button>
+      {createdManualMission.checkpoints.length > 0 && (
+        <button onClick={handleStartMissionAttempt}>
+          Begin Mission
+        </button>
+      )}
     </div>
   );
 };
