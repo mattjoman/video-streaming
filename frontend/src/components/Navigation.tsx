@@ -25,7 +25,11 @@ export default function Navigation() {
       <div>
         <button onClick={() => dispatch(popPage())}>Back</button>
         {pages.map((page: { id: string, display: string }, index: number) => (
-          <button key={index} onClick={() => handleNavigate(page.id)}>
+          <button
+            key={index}
+            onClick={() => handleNavigate(page.id)}
+            style={history[history.length - 1] === page.id ? { backgroundColor: 'gray' } : { backgroundColor: 'white' }}
+          >
             {page.display}
           </button>
         ))}
