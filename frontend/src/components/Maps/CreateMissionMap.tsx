@@ -75,7 +75,7 @@ function CreateMissionMap({ isManualMission = false }: { isManualMission: boolea
   return (
     <>
       <Map reuseMaps={true} mapId="map" colorScheme="LIGHT" renderingType="RASTER"
-        defaultCenter={{ lat: 0, lng: 0 }}
+        defaultCenter={{ lat: 51.25, lng: 0 }}
         defaultZoom={5}
         style={{ width: '100vh', height: '50vh' }}
         onClick={handleMapClick}
