@@ -52,8 +52,6 @@ function CreateMission() {
 
   return (
     <div>
-      <h1>Mission Generator</h1>
-
       <CreateMissionMap isManualMission={false} />
 
       <TextInput

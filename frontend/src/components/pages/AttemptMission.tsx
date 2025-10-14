@@ -5,7 +5,6 @@ function AttemptMission() {
 
   return (
     <div>
-      <h1>Attempt Mission</h1>
       <AttemptMissionMap />
     </div>
   )

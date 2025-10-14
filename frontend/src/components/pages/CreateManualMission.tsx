@@ -39,8 +39,6 @@ function CreateManualMission() {
 
   return (
     <div>
-      <h1>Manual Mission Generator</h1>
-
       <CreateMissionMap isManualMission={true} />
 
       <TextInput
