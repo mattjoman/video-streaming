@@ -5,3 +5,4 @@
 - When generating missions, make sure the checkpoints are randomly selected, not just the 'top 3 that fit the config criteria'
 
 ## Frontend
+- Set the name once the mission is generated (edit the mission directly)
