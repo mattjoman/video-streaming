@@ -32,7 +32,7 @@ function AttemptMissionMap() {
     <Map reuseMaps={true} mapId="map" colorScheme="LIGHT" renderingType="RASTER"
       defaultCenter={{ lat: 51.25, lng: 0 }}
       defaultZoom={5}
-      style={{ width: '100vh', height: '50vh' }}
+      style={{ width: '100%', height: '20em' }}
     >
       {missionAttempt?.checkpoints && missionAttempt.checkpoints.map((checkpoint: AttemptCheckpoint, idx: number) => (
         <>

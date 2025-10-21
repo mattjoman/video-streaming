@@ -26,6 +26,9 @@ export default function Navigation() {
     <div style={{
       position: 'relative',
       height: '100vh',
+      width: '50em',
+      textAlign: 'center',
+      margin: 'auto',
     }}>
       <div style={{ height: '3em', backgroundColor: '#aaffff' }}>
         <button onClick={() => setShowNavigation(!showNavigation)}>Navigation</button>
