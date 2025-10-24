@@ -1,4 +1,4 @@
-export * from './Home';
+export * from './Info';
 export * from './CreateMission';
 export * from './CreateManualMission';
 export * from './AttemptMission';

@@ -5,7 +5,7 @@ interface PageHistoryState {
 }
 
 const initialState: PageHistoryState = {
-  history: ['home']
+  history: ['create-mission']
 };
 
 const pageHistorySlice = createSlice({

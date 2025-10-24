@@ -1,15 +1,15 @@
 import React, { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { pushPage, popPage } from '../store/slices/pageHistorySlice';
-import { Home, CreateMission, AttemptMission, SearchMissions, CreateCheckpoint, CreateManualMission } from './pages';
+import { Info, CreateMission, AttemptMission, SearchMissions, CreateCheckpoint, CreateManualMission } from './pages';
 
 const pages = [
-  { id: 'home', display: 'Home' },
   { id: 'create-mission', display: 'Create Mission' },
   { id: 'create-manual-mission', display: 'Create Manual Mission' },
   { id: 'attempt-mission', display: 'Attempt Mission' },
   { id: 'search-missions', display: 'Search Missions' },
   { id: 'create-checkpoint', display: 'Create Checkpoint' },
+  { id: 'info', display: 'Info' },
 ];
 
 export default function Navigation() {
@@ -66,7 +66,7 @@ export default function Navigation() {
         position: 'absolute',
         top: '3em',
       }}>
-        {history[history.length - 1] === 'home' ? (<Home />) : (<></>)}
+        {history[history.length - 1] === 'info' ? (<Info />) : (<></>)}
         {history[history.length - 1] === 'create-mission' ? (<CreateMission />) : (<></>)}
         {history[history.length - 1] === 'create-manual-mission' ? (<CreateManualMission />) : (<></>)}
         {history[history.length - 1] === 'attempt-mission' ? (<AttemptMission />) : (<></>)}
