@@ -1,14 +1,13 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { pushPage } from '../../store/slices/pageHistorySlice';
-import { updateCreateMissionConfig } from '../../store/slices/createMissionConfigSlice';
 import { setCreatedMission } from '../../store/slices/createdMissionSlice';
 import { setMissionAttempt } from '../../store/slices/missionAttemptSlice';
 import { generateMission, saveMission } from '../../services/missionService';
 import { startMissionAttempt } from '../../services/missionAttemptService';
-import { MissionConfig } from '../../types';
 import { CreateMissionMap } from '../Maps';
-import { MultiChoiceInput, NumberInput, TagSelector, TextInput } from '../common';
+import { PanelCreateMissionConfig } from '../PanelCreateMissionConfig';
+import { PanelCreatedMission } from '../PanelCreatedMission';
 
 function CreateMission() {
   const dispatch = useDispatch();
@@ -46,52 +45,11 @@ function CreateMission() {
     }
   };
 
-  const updateConfig = (updates: Partial<MissionConfig>) => {
-    dispatch(updateCreateMissionConfig(updates));
-  };
-
   return (
     <div>
       <CreateMissionMap isManualMission={false} />
 
-      <TextInput
-        label="Name: "
-        value={createMissionConfig.name}
-        onChange={(value: string) => updateConfig({ name: value })}
-        placeholder="Mission name"
-      />
-
-      <MultiChoiceInput
-        label="Source: "
-        options={[{ value: 'database', label: 'Database' }, { value: 'random', label: 'Random' }]}
-        value={createMissionConfig.cptSource}
-        setValue={(value: string) => updateConfig({ cptSource: value })}
-      />
-
-      <NumberInput
-        label="Radius (km): "
-        value={createMissionConfig.r}
-        onChange={(value) => updateConfig({ r: value })}
-        placeholder="10"
-      />
-
-      <NumberInput
-        label="Number of checkpoints: "
-        value={createMissionConfig.n}
-        onChange={(value) => updateConfig({ n: value })}
-        placeholder="3"
-      />
-
-      {createMissionConfig.cptSource === 'database' && (
-        <TagSelector
-          tags={createMissionConfig.tags}
-          onChange={(tags: string[]) => updateConfig({ tags: tags })}
-        />
-      )}
-
-      <button onClick={handleGenerateMission}>
-        New Mission
-      </button>
+      <PanelCreatedMission />
 
       {createdMission.checkpoints.length > 0 && createdMission.config.name !== '' && (
         <button onClick={handleSaveMission}>
@@ -104,6 +62,12 @@ function CreateMission() {
           Begin Mission
         </button>
       )}
+
+      <PanelCreateMissionConfig />
+
+      <button onClick={handleGenerateMission}>
+        New Mission
+      </button>
     </div>
   );
 };

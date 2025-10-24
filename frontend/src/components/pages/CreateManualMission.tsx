@@ -1,12 +1,12 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { pushPage } from '../../store/slices/pageHistorySlice';
-import { updateCreatedManualMission, setCreatedManualMission } from '../../store/slices/createdManualMissionSlice';
+import { setCreatedManualMission } from '../../store/slices/createdManualMissionSlice';
 import { setMissionAttempt } from '../../store/slices/missionAttemptSlice';
 import { saveMission } from '../../services/missionService';
 import { startMissionAttempt } from '../../services/missionAttemptService';
 import { CreateMissionMap } from '../Maps';
-import { TextInput } from '../common';
+import { PanelCreatedManualMission } from '../PanelCreatedManualMission';
 
 function CreateManualMission() {
   const dispatch = useDispatch();
@@ -33,20 +33,11 @@ function CreateManualMission() {
     }
   };
 
-  const updateMissionName = (value: string) => {
-    dispatch(updateCreatedManualMission({ config: { ...createdManualMission.config, name: value } }));
-  };
-
   return (
     <div>
       <CreateMissionMap isManualMission={true} />
 
-      <TextInput
-        label="Name: "
-        value={createdManualMission.config.name}
-        onChange={(value: string) => updateMissionName(value)}
-        placeholder="Mission name"
-      />
+      <PanelCreatedManualMission />
 
       {createdManualMission.checkpoints.length > 0 && createdManualMission.config.name !== '' && (
         <button onClick={handleSaveMission}>
