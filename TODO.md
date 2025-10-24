@@ -5,4 +5,3 @@
 
 ## Frontend
 - Set the name once the mission is generated (edit the mission directly)
-- Save state to `localStorage` when it is updated, and load when the page is first visited (start with `missionAttempt` state)
