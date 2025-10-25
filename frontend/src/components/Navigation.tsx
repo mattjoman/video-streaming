@@ -26,7 +26,7 @@ export default function Navigation() {
     <div style={{
       position: 'relative',
       height: '100vh',
-      width: '50em',
+      maxWidth: '50em',
       textAlign: 'center',
       margin: 'auto',
     }}>
