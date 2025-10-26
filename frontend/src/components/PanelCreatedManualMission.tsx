@@ -12,7 +12,7 @@ export function PanelCreatedManualMission() {
   };
 
   return (
-    <div>
+    <div className="panel">
       <TextInput
         label="Name: "
         value={createdManualMission.config.name}

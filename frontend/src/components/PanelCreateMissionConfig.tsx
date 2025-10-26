@@ -25,8 +25,8 @@ export function PanelCreateMissionConfig() {
   };
 
   return (
-    <div style={{ textAlign: 'left' }}>
-      <h2>Mission Configuration</h2>
+    <div className="panel">
+      <h2>New Mission</h2>
 
       <MultiChoiceInput
         label="Source: "

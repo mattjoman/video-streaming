@@ -41,7 +41,7 @@ export function PanelCreatedMission() {
   }
 
   return (
-    <div style={{ textAlign: 'left' }}>
+    <div className="panel">
       <h2>Current Mission</h2>
       <TextInput
         label="Name: "
