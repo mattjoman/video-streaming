@@ -2,7 +2,9 @@ import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { updateCreateMissionConfig } from '../store/slices/createMissionConfigSlice';
 import { MissionConfig } from '../types';
-import { MultiChoiceInput, NumberInput, TagSelector, TextInput } from './common';
+import { MultiChoiceInput, NumberInput, TagSelector } from './common';
+import { generateMission } from '../services/missionService';
+import { setCreatedMission } from '../store/slices/createdMissionSlice';
 
 export function PanelCreateMissionConfig() {
   const dispatch = useDispatch();
@@ -12,8 +14,20 @@ export function PanelCreateMissionConfig() {
     dispatch(updateCreateMissionConfig(updates));
   };
 
+  const handleGenerateMission = async () => {
+    try {
+      const mission = await generateMission(createMissionConfig);
+      console.log('Generated mission:', mission);
+      dispatch(setCreatedMission(mission));
+    } catch (error) {
+      console.error('Failed to generate mission:', error);
+    }
+  };
+
   return (
-    <div>
+    <div style={{ textAlign: 'left' }}>
+      <h2>Mission Configuration</h2>
+
       <MultiChoiceInput
         label="Source: "
         options={[{ value: 'database', label: 'Database' }, { value: 'random', label: 'Random' }]}
@@ -41,6 +55,10 @@ export function PanelCreateMissionConfig() {
           onChange={(tags: string[]) => updateConfig({ tags: tags })}
         />
       )}
+
+      <button onClick={handleGenerateMission}>
+        New Mission
+      </button>
     </div>
   );
 }
