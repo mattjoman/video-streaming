@@ -1,12 +1,16 @@
 :root {
-  --bg-main: #000000;
-  --bg-secondary: #111111;
+  --bg-main: #113322;
+  --bg-secondary: #331122;
 
   --text-main: #ffffff;
   --text-secondary: #cccccc;
 
   --border-main: #ffffff;
   --border-secondary: #cccccc;
+}
+
+h2 {
+  margin: 0;
 }
 
 
@@ -23,6 +27,25 @@ div.main {
   color: var(--text-main);
 }
 
+div.navigation {
+  height: calc(100vh - 3em);
+  width: 100%;
+  position: absolute;
+  top: 3em;
+  z-index: 1000;
+  background-color: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+div.data {
+  height: calc(100vh - 3em);
+  width: 100%;
+  overflow: auto;
+  position: absolute;
+  top: 3em;
+}
+
 
 
 /*** MAPS ***/
@@ -36,9 +59,25 @@ div.panel {
   background-color: var(--bg-secondary);
   border: 1px solid var(--border-secondary);
   text-align: left;
+  margin: 1em;
+  padding: .5em;
 }
 
 
+
+
+/*** TAGS ***/
+.tag-selected {
+  background-color: var(--bg-secondary);
+  color: var(--text-main);
+  border: 1px solid var(--border-secondary);
+}
+
+.tag-unselected {
+  background-color: var(--bg-main);
+  color: var(--text-secondary);
+  border: 1px solid var(--border-secondary);
+}
 
 
 

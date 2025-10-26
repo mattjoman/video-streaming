@@ -29,16 +29,7 @@ export default function Navigation() {
       </div>
 
       {showNavigation && (
-        <div style={{
-          height: 'calc(100vh - 3em)',
-          width: '100%',
-          position: 'absolute',
-          top: '3em',
-          zIndex: 1000,
-          backgroundColor: 'rgba(255, 255, 255, 0.5)',
-          backdropFilter: 'blur(10px)',
-          WebkitBackdropFilter: 'blur(10px)',
-        }}>
+        <div className="navigation">
           <button onClick={() => dispatch(popPage())}>Back</button>
           {pages.map((page: { id: string, display: string }, index: number) => (
             <button
@@ -52,14 +43,7 @@ export default function Navigation() {
         </div>
       )}
 
-      <div style={{
-        height: 'calc(100vh - 3em)',
-        width: '100%',
-        overflow: 'auto',
-        backgroundColor: '#ffffaa',
-        position: 'absolute',
-        top: '3em',
-      }}>
+      <div className="data">
         {history[history.length - 1] === 'info' ? (<Info />) : (<></>)}
         {history[history.length - 1] === 'create-mission' ? (<CreateMission />) : (<></>)}
         {history[history.length - 1] === 'create-manual-mission' ? (<CreateManualMission />) : (<></>)}
