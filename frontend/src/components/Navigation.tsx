@@ -24,8 +24,8 @@ export default function Navigation() {
 
   return (
     <div className="main">
-      <div style={{ height: '3em', backgroundColor: '#aaffff' }}>
-        <button onClick={() => setShowNavigation(!showNavigation)} style={{ height: '100%', width: '100%' }}>Navigation</button>
+      <div className="show-navigation-container">
+        <button onClick={() => setShowNavigation(!showNavigation)} className="show-navigation-button">Navigation</button>
       </div>
 
       {showNavigation && (

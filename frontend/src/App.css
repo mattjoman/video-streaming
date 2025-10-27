@@ -1,16 +1,30 @@
 :root {
-  --bg-main: #113322;
-  --bg-secondary: #331122;
+  --bg-main: #224444;
+  --bg-secondary: #226666;
+  --bg-navigation: rgba(0, 0, 0, 0.5);
 
-  --text-main: #ffffff;
+  --text-main: #11dddd;
   --text-secondary: #cccccc;
 
-  --border-main: #ffffff;
-  --border-secondary: #cccccc;
+  --border-main: #11dddd;
+  --border-secondary: #11dddd;
+
+  /*** TAGS ***/
+  --bg-tag-selected: #ff88bb;
+  --bg-tag-unselected: #dd5599;
+  --text-tag: #331122;
+  --border-tag: #331122;
 }
 
 h2 {
   margin: 0;
+}
+
+button {
+  color: var(--text-main);
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border-secondary);
+  border-radius: 1em;
 }
 
 
@@ -33,7 +47,7 @@ div.navigation {
   position: absolute;
   top: 3em;
   z-index: 1000;
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: var(--bg-navigation);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
 }
@@ -44,6 +58,17 @@ div.data {
   overflow: auto;
   position: absolute;
   top: 3em;
+}
+
+div.show-navigation-container {
+  height: 3em;
+}
+
+button.show-navigation-button {
+  height: 100%;
+  width: 100%;
+  background-color: #000000;
+  color: var(--text-main);
 }
 
 
@@ -58,6 +83,7 @@ div.data {
 div.panel {
   background-color: var(--bg-secondary);
   border: 1px solid var(--border-secondary);
+  border-radius: 1em;
   text-align: left;
   margin: 1em;
   padding: .5em;
@@ -65,18 +91,18 @@ div.panel {
 
 
 
-
 /*** TAGS ***/
+.tag {
+  color: var(--text-tag);
+  border: 1px solid var(--border-tag);
+  border-radius: 1em;
+}
 .tag-selected {
-  background-color: var(--bg-secondary);
-  color: var(--text-main);
-  border: 1px solid var(--border-secondary);
+  background-color: var(--bg-tag-selected);
 }
 
 .tag-unselected {
-  background-color: var(--bg-main);
-  color: var(--text-secondary);
-  border: 1px solid var(--border-secondary);
+  background-color: var(--bg-tag-unselected);
 }
 
 

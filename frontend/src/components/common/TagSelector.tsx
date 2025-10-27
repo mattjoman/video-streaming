@@ -10,11 +10,11 @@ function TagSelector({ tags, onChange }: { tags: string[], onChange: any }) {
     <div>
       <button
         onClick={() => handleChange('nature')}
-        className={ tags.includes('nature') ? 'tag-selected' : 'tag-unselected' }
+        className={ `tag ${tags.includes('nature') ? 'tag-selected' : 'tag-unselected'}` }
       >nature</button>
       <button
         onClick={() => handleChange('misc')}
-        className={ tags.includes('misc') ? 'tag-selected' : 'tag-unselected' }
+        className={ `tag ${tags.includes('misc') ? 'tag-selected' : 'tag-unselected'}` }
       >misc</button>
     </div>
   );
