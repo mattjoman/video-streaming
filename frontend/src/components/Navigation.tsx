@@ -35,7 +35,7 @@ export default function Navigation() {
             <button
               key={index}
               onClick={() => handleNavigate(page.id)}
-              style={history[history.length - 1] === page.id ? { backgroundColor: 'gray' } : { backgroundColor: 'white' }}
+              className={`navigation-button ${history[history.length - 1] === page.id ? 'navigation-button-selected' : ''}`}
             >
               {page.display}
             </button>

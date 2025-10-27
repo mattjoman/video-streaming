@@ -26,6 +26,9 @@ button {
   border: 1px solid var(--border-secondary);
   border-radius: 1em;
 }
+button:hover {
+  cursor: pointer;
+}
 
 
 /* This is found in the Navigation component */
@@ -69,6 +72,19 @@ button.show-navigation-button {
   width: 100%;
   background-color: #000000;
   color: var(--text-main);
+  border: none;
+  border-radius: 0;
+}
+button.navigation-button {
+  border: none;
+  background-color: rgba(0, 0, 0, 0);
+}
+button.navigation-button:hover {
+  text-decoration: underline;
+}
+button.navigation-button-selected {
+  border: 1px solid var(--border-main);
+  border-radius: 1em;
 }
 
 
