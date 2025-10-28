@@ -112,6 +112,10 @@ button.navigation-button-selected {
 }
 
 
+
+
+
+/*** PANELS ***/
 div.panel {
   background-color: var(--bg-secondary);
   border: 1px solid var(--border-secondary);
