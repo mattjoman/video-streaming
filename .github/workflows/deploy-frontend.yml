@@ -7,7 +7,7 @@ on:
       - 'frontend/**'
 
 jobs:
-  deploy:
+  build:
     runs-on: ubuntu-latest
     
     steps:
@@ -32,9 +32,24 @@ jobs:
           VITE_API_URL: ${{ github.ref == 'refs/heads/main' && vars.PROD_API_URL || vars.DEV_API_URL }}
           VITE_GOOGLE_MAPS_API_KEY: ${{ vars.GOOGLE_MAPS_API_KEY }}
           
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v4
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./frontend/dist
-          destination_dir: ${{ github.ref == 'refs/heads/main' && '' || 'dev' }}
+          path: ./frontend/dist
+
+  deploy:
+    needs: build
+    
+    permissions:
+      pages: write
+      id-token: write
+    
+    environment:
+      name: ${{ github.ref == 'refs/heads/main' && 'github-pages' || 'github-pages-dev' }}
+      url: ${{ steps.deployment.outputs.page_url }}
+    
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
