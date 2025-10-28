@@ -16,6 +16,8 @@
   --border-tag: #331122;
 }
 
+
+/*** GENERAL ***/
 h2 {
   margin: 0;
 }
@@ -29,6 +31,13 @@ button {
 button:hover {
   cursor: pointer;
 }
+
+
+
+
+
+
+
 
 
 /* This is found in the Navigation component */
