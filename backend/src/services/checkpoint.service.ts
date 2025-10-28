@@ -33,7 +33,10 @@ export class CheckpointService {
     }
     
     // Find checkpoints based on query and limit
-    const checkpoints = await this.checkpointModel.find(query).limit(config.n).exec();
+    const checkpoints = await this.checkpointModel.aggregate([
+      { $match: query },
+      { $sample: { size: config.n } },
+    ]);
 
     return {
       config,

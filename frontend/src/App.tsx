@@ -1,7 +1,9 @@
-import React, { useState, useEffect } from 'react'
+import React, { useEffect } from 'react'
 import axios from 'axios'
 import './App.css'
 import Navigation from './components/Navigation'
+
+const backendUrl = import.meta.env.VITE_API_URL;
 
 function App() {
   useEffect(() => {
@@ -18,7 +20,7 @@ function App() {
         
         // Add base URL if not present
         if (!config.url?.startsWith('http')) {
-          config.baseURL = 'http://localhost:3000';
+          config.baseURL = backendUrl;
         }
         
         // Add default headers

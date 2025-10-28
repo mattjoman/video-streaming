@@ -2,8 +2,9 @@ import requests
 import json
 
 
-API_URL = "http://localhost:3000"
-#API_URL = "https://1s8iexdsog.execute-api.eu-west-1.amazonaws.com"
+#API_URL = "http://localhost:3000"
+API_URL = "https://b12t07s4xa.execute-api.eu-west-1.amazonaws.com" # dev
+#API_URL = "https://1s8iexdsog.execute-api.eu-west-1.amazonaws.com" # prod
 
 
 def generate_mission(n: int, r: int, location: list[float], tags: list[str], cptSource: str="database"):
@@ -34,5 +35,5 @@ def generate_and_save_mission():
 
 
 if __name__ == "__main__":
-    #print(generate_mission(n=2, r=1, location=[-0.086, 51.518], tags=[]))
-    generate_and_save_mission()
+    print(generate_mission(n=2, r=100, location=[-0.086, 51.518], tags=[]))
+    #generate_and_save_mission()

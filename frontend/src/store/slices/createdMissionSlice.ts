@@ -1,7 +1,18 @@
 import { createSlice } from '@reduxjs/toolkit';
 import { Mission } from '../../types';
 
-const initialState: Mission | Object = {};
+const initialState: Partial<Mission> = {
+  _id: '',
+  config: {
+    name: '',
+    n: 0,
+    tags: [],
+    r: 0,
+    cptSource: '',
+    location: { type: 'Point', coordinates: [0, 0] }
+  },
+  checkpoints: []
+};
 
 const createdMissionSlice = createSlice({
   name: 'createdMission',
@@ -17,5 +28,9 @@ const createdMissionSlice = createSlice({
   }
 });
 
-export const { setCreatedMission, updateCreatedMission, resetCreatedMission } = createdMissionSlice.actions;
+export const {
+  setCreatedMission,
+  updateCreatedMission,
+  resetCreatedMission,
+} = createdMissionSlice.actions;
 export default createdMissionSlice.reducer;
