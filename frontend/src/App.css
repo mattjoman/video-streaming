@@ -40,7 +40,7 @@ button:hover {
 
 
 
-/* This is found in the Navigation component */
+/*** NAVIGATION COMPONENT ***/
 div.main {
   position: relative;
   height: 100vh;
@@ -95,6 +95,13 @@ button.navigation-button-selected {
   border: 1px solid var(--border-main);
   border-radius: 1em;
 }
+
+
+
+
+
+
+
 
 
 
